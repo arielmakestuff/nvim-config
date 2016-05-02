@@ -1,3 +1,4 @@
 .cs_files
 .init.vim-rplugin~
 .netrwhist
+plugged/
