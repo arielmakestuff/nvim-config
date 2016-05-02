@@ -1,0 +1,40 @@
+2016-01-14T20:49:11-0500 Log level 2: Neomake: Starting: /bin/zsh -c make
+2016-01-14T20:49:11-0500 Log level 3: Neomake: makeprg stderr: make: *** No targets specified and no makefile found.  Stop.
+2016-01-14T20:49:11-0500 Log level 3: Neomake: makeprg stderr: 
+2016-01-14T20:49:11-0500 Log level 3: Neomake: makeprg stderr done.
+2016-01-14T20:49:11-0500 Log level 3: Neomake: makeprg processing 2 lines of output
+2016-01-14T20:49:11-0500 Log level 1: Neomake: makeprg complete with exit code 2
+2016-01-14T20:49:11-0500 Log level 3: Neomake: All project-level errors cleaned.
+2016-01-14T20:49:11-0500 Log level 3: Neomake: Removing signs {file: {}, project: {}}
+2016-01-14T20:49:37-0500 Log level 2: Neomake: Starting: /bin/zsh -c make
+2016-01-14T20:49:37-0500 Log level 3: Neomake: makeprg stderr: make: *** No targets specified and no makefile found.  Stop.
+2016-01-14T20:49:37-0500 Log level 3: Neomake: makeprg stderr: 
+2016-01-14T20:49:37-0500 Log level 3: Neomake: makeprg stderr done.
+2016-01-14T20:49:37-0500 Log level 3: Neomake: makeprg processing 2 lines of output
+2016-01-14T20:49:37-0500 Log level 1: Neomake: makeprg complete with exit code 2
+2016-01-14T20:49:37-0500 Log level 3: Neomake: All project-level errors cleaned.
+2016-01-14T20:49:37-0500 Log level 3: Neomake: Removing signs {file: {}, project: {}}
+2016-01-14T20:49:44-0500 Log level 2: Neomake: Starting: /bin/zsh -c make
+2016-01-14T20:49:44-0500 Log level 3: Neomake: makeprg stderr: make: *** No targets specified and no makefile found.  Stop.
+2016-01-14T20:49:44-0500 Log level 3: Neomake: makeprg stderr: 
+2016-01-14T20:49:44-0500 Log level 3: Neomake: makeprg stderr done.
+2016-01-14T20:49:44-0500 Log level 3: Neomake: makeprg processing 2 lines of output
+2016-01-14T20:49:44-0500 Log level 1: Neomake: makeprg complete with exit code 2
+2016-01-14T20:49:44-0500 Log level 3: Neomake: All project-level errors cleaned.
+2016-01-14T20:49:44-0500 Log level 3: Neomake: Removing signs {file: {}, project: {}}
+2016-01-14T20:49:55-0500 Log level 2: Neomake: Starting: /bin/zsh -c make
+2016-01-14T20:49:55-0500 Log level 3: Neomake: makeprg stderr: make: *** No targets specified and no makefile found.  Stop.
+2016-01-14T20:49:55-0500 Log level 3: Neomake: makeprg stderr: 
+2016-01-14T20:49:55-0500 Log level 3: Neomake: makeprg stderr done.
+2016-01-14T20:49:55-0500 Log level 3: Neomake: makeprg processing 2 lines of output
+2016-01-14T20:49:55-0500 Log level 1: Neomake: makeprg complete with exit code 2
+2016-01-14T20:49:55-0500 Log level 3: Neomake: All project-level errors cleaned.
+2016-01-14T20:49:55-0500 Log level 3: Neomake: Removing signs {file: {}, project: {}}
+2016-01-14T20:50:03-0500 Log level 2: Neomake: Starting: /bin/zsh -c make
+2016-01-14T20:50:03-0500 Log level 3: Neomake: makeprg stderr: make: *** No targets specified and no makefile found.  Stop.
+2016-01-14T20:50:03-0500 Log level 3: Neomake: makeprg stderr: 
+2016-01-14T20:50:03-0500 Log level 3: Neomake: makeprg stderr done.
+2016-01-14T20:50:03-0500 Log level 3: Neomake: makeprg processing 2 lines of output
+2016-01-14T20:50:03-0500 Log level 1: Neomake: makeprg complete with exit code 2
+2016-01-14T20:50:03-0500 Log level 3: Neomake: All project-level errors cleaned.
+2016-01-14T20:50:03-0500 Log level 3: Neomake: Removing signs {file: {}, project: {}}

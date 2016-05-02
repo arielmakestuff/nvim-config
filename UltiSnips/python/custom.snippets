@@ -1,0 +1,25 @@
+extends python
+
+snippet #-
+# --------------------
+# ${1:header}
+# --------------------
+endsnippet
+
+snippet #=
+# ============================================================================
+# ${1:header}
+# ============================================================================
+endsnippet
+
+snippet bcls "base class with docstrings" b
+class ${1:MyClass}:
+    """${2:TODO: to be defined}"""
+
+endsnippet
+
+snippet ocls "Subclass with docstrings" b
+class ${1:MyClass}(${2}):
+    """${3:TODO: to be defined}"""
+
+endsnippet

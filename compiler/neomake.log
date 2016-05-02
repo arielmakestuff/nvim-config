@@ -1,0 +1,105 @@
+2016-01-14T20:49:20-0500 Log level 2: Neomake: Starting: /bin/zsh -c make
+2016-01-14T20:49:20-0500 Log level 3: Neomake: makeprg stderr: make: *** No targets specified and no makefile found.  Stop.
+2016-01-14T20:49:20-0500 Log level 3: Neomake: makeprg stderr: 
+2016-01-14T20:49:20-0500 Log level 3: Neomake: makeprg stderr done.
+2016-01-14T20:49:20-0500 Log level 3: Neomake: makeprg processing 2 lines of output
+2016-01-14T20:49:20-0500 Log level 1: Neomake: makeprg complete with exit code 2
+2016-01-14T20:49:20-0500 Log level 3: Neomake: All project-level errors cleaned.
+2016-01-14T20:49:20-0500 Log level 3: Neomake: Removing signs {file: {}, project: {}}
+2016-01-14T20:52:33-0500 Log level 2: Neomake: Starting: /bin/zsh -c (/home/smokybobo/.local/share/nvim/pyvenv3/bin/vint vint.vim)
+2016-01-14T20:52:33-0500 Log level 3: Neomake: makeprg stdout: vint.vim:1:11: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:52:33-0500 Log level 3: Neomake: makeprg stdout: vint.vim:4:5: Make the scope explicit like `g:current_compiler` (see Anti-pattern of vimrc (Scope of identifier))
+2016-01-14T20:52:33-0500 Log level 3: Neomake: makeprg stdout: vint.vim:4:24: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:52:33-0500 Log level 3: Neomake: makeprg stdout: vint.vim:5:11: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:52:33-0500 Log level 3: Neomake: makeprg stdout: 
+2016-01-14T20:52:33-0500 Log level 3: Neomake: makeprg stdout done.
+2016-01-14T20:52:33-0500 Log level 3: Neomake: makeprg processing 5 lines of output
+2016-01-14T20:52:33-0500 Log level 3: Neomake: All project-level errors cleaned.
+2016-01-14T20:52:33-0500 Log level 3: Neomake: Removing signs {file: {}, project: {1: {138: 7004, 145: 7005, 130: 7000, 48: 7006, 135: 7001, 136: 7002, 137: 7003}}}
+2016-01-14T20:52:33-0500 Log level 3: Neomake: Cleaning old signs in buffer 1:  {1: {138: 7004, 145: 7005, 130: 7000, 48: 7006, 135: 7001, 136: 7002, 137: 7003}}
+2016-01-14T20:52:33-0500 Log level 3: Neomake: Unplacing sign: sign unplace 7004 buffer=1
+2016-01-14T20:52:33-0500 Log level 3: Neomake: Unplacing sign: sign unplace 7005 buffer=1
+2016-01-14T20:52:33-0500 Log level 3: Neomake: Unplacing sign: sign unplace 7000 buffer=1
+2016-01-14T20:52:33-0500 Log level 3: Neomake: Unplacing sign: sign unplace 7006 buffer=1
+2016-01-14T20:52:33-0500 Log level 3: Neomake: Unplacing sign: sign unplace 7001 buffer=1
+2016-01-14T20:52:33-0500 Log level 3: Neomake: Unplacing sign: sign unplace 7002 buffer=1
+2016-01-14T20:52:33-0500 Log level 3: Neomake: Unplacing sign: sign unplace 7003 buffer=1
+2016-01-14T20:52:33-0500 Log level 3: Neomake: Removing signs {file: {}, project: {}}
+2016-01-14T20:52:33-0500 Log level 3: Neomake: Removing signs {file: {}, project: {}}
+2016-01-14T20:52:33-0500 Log level 3: Neomake: Removing signs {file: {}, project: {}}
+2016-01-14T20:52:33-0500 Log level 1: Neomake: makeprg complete with exit code 1
+2016-01-14T20:52:33-0500 Log level 3: Neomake: Removing signs {file: {}, project: {}}
+2016-01-14T20:52:33-0500 Log level 3: Neomake: Placing sign: sign place 7000 line=1 name=neomake_err buffer=5
+2016-01-14T20:52:33-0500 Log level 3: Neomake: Placing sign: sign place 7001 line=4 name=neomake_err buffer=5
+2016-01-14T20:52:33-0500 Log level 3: Neomake: Placing sign: sign place 7002 line=5 name=neomake_err buffer=5
+2016-01-14T20:52:33-0500 Log level 3: Neomake: WideMessage echo makeprg: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:52:37-0500 Log level 3: Neomake: WideMessage echo makeprg: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:52:38-0500 Log level 3: Neomake: WideMessage echo makeprg: Make the scope explicit like `g:current_compiler` (see Anti-pattern of vimrc
+2016-01-14T20:52:39-0500 Log level 3: Neomake: WideMessage echo makeprg: Make the scope explicit like `g:current_compiler` (see Anti-pattern of vimrc
+2016-01-14T20:52:40-0500 Log level 3: Neomake: WideMessage echo makeprg: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:52:42-0500 Log level 3: Neomake: WideMessage echo makeprg: Make the scope explicit like `g:current_compiler` (see Anti-pattern of vimrc
+2016-01-14T20:52:51-0500 Log level 3: Neomake: WideMessage echo makeprg: Make the scope explicit like `g:current_compiler` (see Anti-pattern of vimrc
+2016-01-14T20:52:55-0500 Log level 3: Neomake: WideMessage echo makeprg: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:52:56-0500 Log level 3: Neomake: WideMessage echo makeprg: Make the scope explicit like `g:current_compiler` (see Anti-pattern of vimrc
+2016-01-14T20:52:59-0500 Log level 3: Neomake: WideMessage echo makeprg: Make the scope explicit like `g:current_compiler` (see Anti-pattern of vimrc
+2016-01-14T20:53:05-0500 Log level 3: Neomake: WideMessage echo makeprg: Make the scope explicit like `g:current_compiler` (see Anti-pattern of vimrc
+2016-01-14T20:53:06-0500 Log level 3: Neomake: WideMessage echo makeprg: Make the scope explicit like `g:current_compiler` (see Anti-pattern of vimrc
+2016-01-14T20:53:07-0500 Log level 3: Neomake: WideMessage echo makeprg: Make the scope explicit like `g:current_compiler` (see Anti-pattern of vimrc
+2016-01-14T20:53:09-0500 Log level 3: Neomake: WideMessage echo makeprg: Make the scope explicit like `g:current_compiler` (see Anti-pattern of vimrc
+2016-01-14T20:53:13-0500 Log level 2: Neomake: Starting: /bin/zsh -c (/home/smokybobo/.local/share/nvim/pyvenv3/bin/vint vint.vim)
+2016-01-14T20:53:13-0500 Log level 3: Neomake: makeprg stdout: vint.vim:1:11: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:53:13-0500 Log level 3: Neomake: makeprg stdout: vint.vim:4:26: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:53:13-0500 Log level 3: Neomake: makeprg stdout: vint.vim:5:11: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:53:13-0500 Log level 3: Neomake: makeprg stdout: 
+2016-01-14T20:53:13-0500 Log level 3: Neomake: makeprg stdout done.
+2016-01-14T20:53:13-0500 Log level 3: Neomake: makeprg processing 4 lines of output
+2016-01-14T20:53:13-0500 Log level 3: Neomake: All project-level errors cleaned.
+2016-01-14T20:53:13-0500 Log level 3: Neomake: Removing signs {file: {}, project: {5: {1: 7000, 4: 7001, 5: 7002}}}
+2016-01-14T20:53:13-0500 Log level 3: Neomake: Cleaning old signs in buffer 5:  {5: {1: 7000, 4: 7001, 5: 7002}}
+2016-01-14T20:53:13-0500 Log level 3: Neomake: Unplacing sign: sign unplace 7000 buffer=5
+2016-01-14T20:53:13-0500 Log level 3: Neomake: Unplacing sign: sign unplace 7001 buffer=5
+2016-01-14T20:53:13-0500 Log level 3: Neomake: Unplacing sign: sign unplace 7002 buffer=5
+2016-01-14T20:53:13-0500 Log level 3: Neomake: Removing signs {file: {}, project: {}}
+2016-01-14T20:53:13-0500 Log level 3: Neomake: Removing signs {file: {}, project: {}}
+2016-01-14T20:53:13-0500 Log level 1: Neomake: makeprg complete with exit code 1
+2016-01-14T20:53:13-0500 Log level 3: Neomake: Removing signs {file: {}, project: {}}
+2016-01-14T20:53:13-0500 Log level 3: Neomake: Placing sign: sign place 7000 line=1 name=neomake_err buffer=5
+2016-01-14T20:53:13-0500 Log level 3: Neomake: Placing sign: sign place 7001 line=4 name=neomake_err buffer=5
+2016-01-14T20:53:13-0500 Log level 3: Neomake: Placing sign: sign place 7002 line=5 name=neomake_err buffer=5
+2016-01-14T20:53:13-0500 Log level 3: Neomake: WideMessage echo makeprg: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:53:15-0500 Log level 3: Neomake: WideMessage echo makeprg: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:53:15-0500 Log level 3: Neomake: WideMessage echo makeprg: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:53:15-0500 Log level 3: Neomake: WideMessage echo makeprg: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:53:15-0500 Log level 3: Neomake: WideMessage echo makeprg: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:53:16-0500 Log level 3: Neomake: WideMessage echo makeprg: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:53:16-0500 Log level 3: Neomake: WideMessage echo makeprg: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:53:17-0500 Log level 3: Neomake: WideMessage echo makeprg: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:53:17-0500 Log level 3: Neomake: WideMessage echo makeprg: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:53:18-0500 Log level 3: Neomake: WideMessage echo makeprg: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:53:18-0500 Log level 3: Neomake: WideMessage echo makeprg: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:53:19-0500 Log level 3: Neomake: WideMessage echo makeprg: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:53:19-0500 Log level 3: Neomake: WideMessage echo makeprg: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:53:20-0500 Log level 3: Neomake: WideMessage echo makeprg: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:53:21-0500 Log level 3: Neomake: WideMessage echo makeprg: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:53:21-0500 Log level 3: Neomake: WideMessage echo makeprg: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:53:22-0500 Log level 3: Neomake: WideMessage echo makeprg: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:53:22-0500 Log level 3: Neomake: WideMessage echo makeprg: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:53:22-0500 Log level 3: Neomake: WideMessage echo makeprg: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:53:23-0500 Log level 3: Neomake: WideMessage echo makeprg: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:53:23-0500 Log level 3: Neomake: WideMessage echo makeprg: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:53:23-0500 Log level 3: Neomake: WideMessage echo makeprg: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:53:24-0500 Log level 3: Neomake: WideMessage echo makeprg: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:53:25-0500 Log level 3: Neomake: WideMessage echo makeprg: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:53:25-0500 Log level 3: Neomake: WideMessage echo makeprg: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:53:25-0500 Log level 3: Neomake: WideMessage echo makeprg: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:53:28-0500 Log level 3: Neomake: WideMessage echo makeprg: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:53:29-0500 Log level 3: Neomake: WideMessage echo makeprg: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:53:29-0500 Log level 3: Neomake: WideMessage echo makeprg: Prefer single quoted strings (see Google VimScript Style Guide (Strings))
+2016-01-14T20:53:31-0500 Log level 2: Neomake: Starting: /bin/zsh -c (/home/smokybobo/.local/share/nvim/pyvenv3/bin/vint vint.vim)
+2016-01-14T20:53:31-0500 Log level 1: Neomake: makeprg complete with exit code 0
+2016-01-14T20:53:31-0500 Log level 3: Neomake: All project-level errors cleaned.
+2016-01-14T20:53:31-0500 Log level 3: Neomake: Removing signs {file: {}, project: {5: {1: 7000, 4: 7001, 5: 7002}}}
+2016-01-14T20:53:31-0500 Log level 3: Neomake: Cleaning old signs in buffer 5:  {5: {1: 7000, 4: 7001, 5: 7002}}
+2016-01-14T20:53:31-0500 Log level 3: Neomake: Unplacing sign: sign unplace 7000 buffer=5
+2016-01-14T20:53:31-0500 Log level 3: Neomake: Unplacing sign: sign unplace 7001 buffer=5
+2016-01-14T20:53:31-0500 Log level 3: Neomake: Unplacing sign: sign unplace 7002 buffer=5
