@@ -252,6 +252,7 @@ set incsearch        " do incremental searching
 " ============================================================================
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+set termguicolors
 
 let &guioptions = 'aegit'
 
