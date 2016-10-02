@@ -60,6 +60,12 @@ endif
 " let g:jedi#show_call_signatures = 0
 
 " --------------------
+" ropevim
+" --------------------
+" Plug 'python-rope/ropevim'
+
+
+" --------------------
 " neomake
 " --------------------
 Plug 'benekastah/neomake'
