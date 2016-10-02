@@ -44,7 +44,7 @@ let g:neomake_python_enabled_makers = ['flake8', 'pylint', 'pylama']
 " autocmd FileType python set omnifunc=python3complete#Complete
 
 
-" Clear hlsearch
+" Run test
 nnoremap <Leader>t :call neoterm#test#run('current')<CR>
 
 
