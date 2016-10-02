@@ -31,7 +31,10 @@ nmap <Leader>x <Plug>CommentaryLine
 " --------------------
 " deoplete
 " --------------------
-Plug 'Shougo/deoplete.nvim'
+function! DoRemote(arg)
+    UpdateRemotePlugins
+endfunction
+Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_smart_case = 1
 
