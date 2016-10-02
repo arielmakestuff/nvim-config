@@ -158,6 +158,13 @@ Plug 'tweekmonster/braceless.vim'
 Plug 'arielmakestuff/vim-isort', { 'branch': 'develop' }
 
 " --------------------
+" Rust
+" --------------------
+Plug 'rust-lang/rust.vim'
+Plug 'racer-rust/vim-racer'
+let g:racer_cmd = 'racer'
+
+" --------------------
 " Others
 " --------------------
 Plug 'honza/vim-snippets'
@@ -326,6 +333,16 @@ augroup filetype_python
 
     " Neomake
     autocmd BufWritePost *.py Neomake
+augroup END
+
+" Rust
+augroup filetype_rust
+    autocmd!
+    autocmd BufRead,BufNewFile *.rs
+        \ source $XDG_CONFIG_HOME/nvim/filetype/rust.vim
+
+    " Neomake
+    autocmd BufWritePost *.rs Neomake
 augroup END
 
 " VimScript
