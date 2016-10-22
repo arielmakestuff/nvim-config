@@ -127,6 +127,9 @@ endfunction
 " Ctrlspace
 " --------------------
 Plug 'vim-ctrlspace/vim-ctrlspace'
+nnoremap <C-S> :CtrlSpace<CR>
+vnoremap <C-S> :CtrlSpace<CR>
+inoremap <C-S> :CtrlSpace<CR>
 
 
 " --------------------
