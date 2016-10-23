@@ -217,6 +217,27 @@ inoremap <F9> <ESC>:UndotreeToggle<CR>
 
 
 " --------------------
+" Airline
+" --------------------
+Plug 'bling/vim-airline'
+let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+" Enable list of buffers
+let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#tabline#show_splits = 0
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#show_tabs = 1
+
+" Show just filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+" let g:airline_theme='badwolf'
+let g:airline_theme='oceanicnext'
+
+
+" --------------------
 " Others
 " --------------------
 Plug 'honza/vim-snippets'
@@ -225,7 +246,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'flazz/vim-colorschemes'
-Plug 'bling/vim-airline'
 Plug 'mhartington/oceanic-next'
 Plug 'marcopaganini/termschool-vim-theme'
 Plug 'edkolev/tmuxline.vim'
@@ -320,20 +340,6 @@ colorscheme OceanicNext
 " colorscheme gruvbox
 " colorscheme termschool
 " set background=dark
-
-" Airline
-let g:airline_powerline_fonts = 1
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-
-" Enable list of buffers
-let g:airline#extensions#tabline#enabled = 0
-
-" Show just filename
-let g:airline#extensions#tabline#fnamemod = ':t'
-" let g:airline_theme='badwolf'
-let g:airline_theme='oceanicnext'
 
 
 " ============================================================================
