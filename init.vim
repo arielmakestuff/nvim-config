@@ -59,11 +59,6 @@ endif
 " let g:jedi#smart_auto_mappings = 0
 " let g:jedi#show_call_signatures = 0
 
-" --------------------
-" ropevim
-" --------------------
-" Plug 'python-rope/ropevim'
-
 
 " --------------------
 " neomake
