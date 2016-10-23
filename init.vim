@@ -123,10 +123,14 @@ vnoremap <F3> <Esc>:FZF<CR>
 " --------------------
 " Ctrlspace
 " --------------------
-Plug 'vim-ctrlspace/vim-ctrlspace'
-nnoremap <C-S> :CtrlSpace<CR>
-vnoremap <C-S> :CtrlSpace<CR>
-inoremap <C-S> :CtrlSpace<CR>
+" Plug 'vim-ctrlspace/vim-ctrlspace'
+" Search buffers
+" nnoremap <C-Space> :CtrlSpace<CR>
+" vnoremap <C-Space> <Esc>:CtrlSpace<CR>
+
+" Search files
+" nnoremap <F3> :CtrlSpace O<CR>
+" vnoremap <F3> <Esc>:CtrlSpace O<CR>
 
 
 " --------------------
