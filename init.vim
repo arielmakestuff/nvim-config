@@ -134,6 +134,26 @@ vnoremap <F3> <Esc>:FZF<CR>
 
 
 " --------------------
+"  Unite
+" --------------------
+Plug 'Shougo/unite.vim'
+if executable('ag')
+    let g:unite_source_grep_command = 'ag'
+endif
+nnoremap <C-Space> :Unite -direction=botright buffer<CR>
+vnoremap <C-Space> <Esc>:Unite -direction=botright buffer<CR>
+
+" Fuzzy file search
+" nnoremap <F3> :Unite -direction=botright file_rec/neovim<CR>
+" vnoremap <F3> <Esc>:Unite -direction=botright file_rec/neovim<CR>
+
+" Unite outline
+Plug 'Shougo/unite-outline'
+nnoremap <Leader>` :Unite outline<CR>
+vnoremap <Leader>` <Esc>:Unite outline<CR>
+
+
+" --------------------
 " Better whitespace
 " --------------------
 Plug 'ntpeters/vim-better-whitespace'
