@@ -208,6 +208,15 @@ inoremap <F4> <Esc>:Scratch<CR>i
 
 
 " --------------------
+"  Undotree
+" --------------------
+Plug 'mbbill/undotree'
+nnoremap <F9> :UndotreeToggle<CR>
+vnoremap <F9> <ESC>:UndotreeToggle<CR>
+inoremap <F9> <ESC>:UndotreeToggle<CR>
+
+
+" --------------------
 " Others
 " --------------------
 Plug 'honza/vim-snippets'
