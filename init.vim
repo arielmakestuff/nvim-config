@@ -466,6 +466,22 @@ nmap <Leader>S :set nospell<CR>
 " :command! -nargs=* Make make <args> | cwindow 3
 " nmap <Leader>j :Make<CR><C-w><Up>
 
+" Open previous buffer. If the buffer is closed, will re-open it
+nnoremap <S-Tab> <C-^>
+
+" Open netrw explore
+nnoremap <F2> :Texplore<CR>
+vnoremap <F2> <Esc>:Texplore<CR>
+inoremap <F2> <Esc>:Texplore<CR>
+
+" Insert timestamp
+nnoremap <F5> "=strftime("%c")<CR>P<Esc>
+inoremap <F5> <C-R>=strftime("%c")<CR>
+nnoremap <F6> "=strftime("%Y-%m-%d %H:%M:%S %Z")<CR>P<Esc>
+inoremap <F6> <C-R>=strftime("%Y-%m-%d %H:%M:%S %Z")<CR>
+nnoremap <F7> "=strftime("%Y.%m.%d.%H%M")<CR>P<Esc>
+inoremap <F7> <C-R>=strftime("%Y.%m.%d.%H%M")<CR>
+
 
 " ============================================================================
 "
