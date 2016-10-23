@@ -19,6 +19,7 @@ endif
 
 call plug#begin()
 
+
 " --------------------
 " vim-commentary
 " --------------------
@@ -27,6 +28,7 @@ xmap <Leader>x <Plug>Commentary
 nmap <Leader>X <Plug>Commentary
 omap <Leader>x <Plug>Commentary
 nmap <Leader>x <Plug>CommentaryLine
+
 
 " --------------------
 " deoplete
@@ -38,6 +40,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_smart_case = 1
 
+
 " --------------------
 " deoplete-jedi
 " --------------------
@@ -48,6 +51,7 @@ if exists(':DeopleteEnable')
     let g:jedi#smart_auto_mappings = 0
     let g:jedi#show_call_signatures = 0
 endif
+
 
 " --------------------
 " jedi
@@ -68,11 +72,13 @@ nmap <Leader>j :Neomake<CR>
 let g:neomake_open_list = 1
 let g:neomake_list_height = 4
 
+
 " --------------------
 " gutentags
 " --------------------
 Plug 'ludovicchabant/vim-gutentags'
 let g:gutentags_enabled = 0
+
 
 " --------------------
 " tagbar
@@ -81,6 +87,7 @@ Plug 'majutsushi/tagbar'
 nnoremap <F8> :TagbarToggle<CR>
 inoremap <F8> <C-c>:TagbarToggle<CR>a
 
+
 " --------------------
 " UltiSnips
 " --------------------
@@ -88,6 +95,7 @@ Plug 'SirVer/ultisnips'
 let g:UltiSnipsExpandTrigger='<tab>'
 let g:UltiSnipsJumpForwardTrigger='<tab>'
 let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
+
 
 " --------------------
 " vim-template
@@ -107,6 +115,7 @@ endfunction
 function! Template_PrettyDate()
     return strftime('%a %b %d, %Y')
 endfunction
+
 
 " --------------------
 " FZF
@@ -173,22 +182,26 @@ augroup betterwhitespace
     autocmd BufWritePre * StripWhitespace
 augroup END
 
+
 " --------------------
 " delimitMate
 " --------------------
 Plug 'Raimondi/delimitMate'
 let g:delimitMate_autoclose = 0
 
+
 " --------------------
 " braceless
 " --------------------
 Plug 'tweekmonster/braceless.vim'
+
 
 " --------------------
 " vim-isort
 " --------------------
 " This sorts python imports
 Plug 'arielmakestuff/vim-isort', { 'branch': 'develop' }
+
 
 " --------------------
 " Rust
@@ -372,7 +385,9 @@ endfunction
 " ============================================================================
 
 
+" --------------------
 " Python
+" --------------------
 augroup filetype_python
     autocmd!
     autocmd BufRead,BufNewFile *.py
@@ -396,7 +411,10 @@ augroup filetype_python
     autocmd BufWritePost *.py Neomake
 augroup END
 
+
+" --------------------
 " Rust
+" --------------------
 augroup filetype_rust
     autocmd!
     autocmd BufRead,BufNewFile *.rs
@@ -406,7 +424,10 @@ augroup filetype_rust
     autocmd BufWritePost *.rs Neomake
 augroup END
 
+
+" --------------------
 " VimScript
+" --------------------
 augroup filetype_vim
     autocmd!
     autocmd BufRead,BufNewFile *.vim
@@ -418,7 +439,10 @@ augroup filetype_vim
     autocmd BufWritePost *.vim Neomake
 augroup END
 
+
+" --------------------
 " Misc
+" --------------------
 augroup filetype_all
     autocmd!
 
