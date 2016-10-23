@@ -249,8 +249,8 @@ Plug 'flazz/vim-colorschemes'
 Plug 'mhartington/oceanic-next'
 Plug 'marcopaganini/termschool-vim-theme'
 Plug 'edkolev/tmuxline.vim'
-Plug 'dag/vim-fish'
 Plug 'pgdouyon/vim-evanesco'
+Plug 'sheerun/vim-polyglot'
 
 
 " ------------------------
