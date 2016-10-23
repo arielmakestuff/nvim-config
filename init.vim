@@ -158,8 +158,8 @@ vnoremap <C-Space> <Esc>:Unite -direction=botright buffer<CR>
 
 " Unite outline
 Plug 'Shougo/unite-outline'
-nnoremap <Leader>` :Unite outline<CR>
-vnoremap <Leader>` <Esc>:Unite outline<CR>
+nnoremap <Leader>` :Unite -direction=botright outline<CR>
+vnoremap <Leader>` <Esc>:Unite -direction=botright outline<CR>
 
 
 " --------------------
