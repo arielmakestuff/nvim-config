@@ -303,7 +303,8 @@ set incsearch        " do incremental searching
 " Look & Feel
 " ============================================================================
 
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+" Enable true colour (requires nvim 0.1.5+)
 set termguicolors
 
 let &guioptions = 'aegit'
