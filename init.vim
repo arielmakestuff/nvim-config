@@ -197,6 +197,16 @@ Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
 let g:racer_cmd = 'racer'
 
+
+" --------------------
+" Scratch
+" --------------------
+Plug 'mtth/scratch.vim'
+nnoremap <F4> :Scratch<CR>
+vnoremap <F4> :ScratchSelection<CR>
+inoremap <F4> <Esc>:Scratch<CR>i
+
+
 " --------------------
 " Others
 " --------------------
@@ -204,7 +214,6 @@ Plug 'honza/vim-snippets'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'mtth/scratch.vim'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'flazz/vim-colorschemes'
 Plug 'bling/vim-airline'
