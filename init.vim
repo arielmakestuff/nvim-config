@@ -19,6 +19,7 @@ endif
 
 call plug#begin()
 
+
 " --------------------
 " vim-commentary
 " --------------------
@@ -27,6 +28,7 @@ xmap <Leader>x <Plug>Commentary
 nmap <Leader>X <Plug>Commentary
 omap <Leader>x <Plug>Commentary
 nmap <Leader>x <Plug>CommentaryLine
+
 
 " --------------------
 " deoplete
@@ -37,6 +39,7 @@ endfunction
 Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_smart_case = 1
+
 
 " --------------------
 " deoplete-jedi
@@ -49,20 +52,16 @@ if exists(':DeopleteEnable')
     let g:jedi#show_call_signatures = 0
 endif
 
+
 " --------------------
 " jedi
 " --------------------
-" Plug 'davidhalter/jedi-vim'
+Plug 'davidhalter/jedi-vim'
+let g:jedi#force_py_version = 3
 " let g:jedi#completions_enabled = 0
-" let g:jedi#force_py_version = 3
 " let g:jedi#auto_vim_configuration = 0
 " let g:jedi#smart_auto_mappings = 0
 " let g:jedi#show_call_signatures = 0
-
-" --------------------
-" ropevim
-" --------------------
-" Plug 'python-rope/ropevim'
 
 
 " --------------------
@@ -73,11 +72,13 @@ nmap <Leader>j :Neomake<CR>
 let g:neomake_open_list = 1
 let g:neomake_list_height = 4
 
+
 " --------------------
 " gutentags
 " --------------------
 Plug 'ludovicchabant/vim-gutentags'
 let g:gutentags_enabled = 0
+
 
 " --------------------
 " tagbar
@@ -86,6 +87,7 @@ Plug 'majutsushi/tagbar'
 nnoremap <F8> :TagbarToggle<CR>
 inoremap <F8> <C-c>:TagbarToggle<CR>a
 
+
 " --------------------
 " UltiSnips
 " --------------------
@@ -93,6 +95,7 @@ Plug 'SirVer/ultisnips'
 let g:UltiSnipsExpandTrigger='<tab>'
 let g:UltiSnipsJumpForwardTrigger='<tab>'
 let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
+
 
 " --------------------
 " vim-template
@@ -113,23 +116,59 @@ function! Template_PrettyDate()
     return strftime('%a %b %d, %Y')
 endfunction
 
+
 " --------------------
 " FZF
 " --------------------
-" Plug 'junegunn/fzf', { 'dir': g:nvim_data_home . '/fzf',
-"             \ 'do': './install --completion --key-bindings --no-update-rc' }
-" Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'dir': g:nvim_data_home . '/fzf',
+            \ 'do': './install --completion --key-bindings --no-update-rc' }
+Plug 'junegunn/fzf.vim'
 " Plug 'junegunn/fzf', { 'do':
 "             \ './install --completion --key-bindings --no-update-rc' }
+nnoremap <F3> :FZF<CR>
+vnoremap <F3> <Esc>:FZF<CR>
 
 
 " --------------------
 " Ctrlspace
 " --------------------
-Plug 'vim-ctrlspace/vim-ctrlspace'
-nnoremap <C-S> :CtrlSpace<CR>
-vnoremap <C-S> :CtrlSpace<CR>
-inoremap <C-S> :CtrlSpace<CR>
+" Plug 'vim-ctrlspace/vim-ctrlspace'
+" Search buffers
+" nnoremap <C-Space> :CtrlSpace<CR>
+" vnoremap <C-Space> <Esc>:CtrlSpace<CR>
+
+" Search files
+" nnoremap <F3> :CtrlSpace O<CR>
+" vnoremap <F3> <Esc>:CtrlSpace O<CR>
+
+
+" --------------------
+"  Unite
+" --------------------
+Plug 'Shougo/unite.vim'
+if executable('ag')
+    let g:unite_source_grep_command = 'ag'
+endif
+nnoremap <C-Space> :Unite -direction=botright buffer<CR>
+vnoremap <C-Space> <Esc>:Unite -direction=botright buffer<CR>
+
+" Fuzzy file search
+" nnoremap <F3> :Unite -direction=botright file_rec/neovim<CR>
+" vnoremap <F3> <Esc>:Unite -direction=botright file_rec/neovim<CR>
+
+" Unite outline
+Plug 'Shougo/unite-outline'
+nnoremap <Leader>` :Unite outline<CR>
+vnoremap <Leader>` <Esc>:Unite outline<CR>
+
+
+" --------------------
+" Ack
+" --------------------
+Plug 'mileszs/ack.vim'
+if executable('ag')
+    let g:ackprg = 'ag --vimgrep'
+endif
 
 
 " --------------------
@@ -143,22 +182,26 @@ augroup betterwhitespace
     autocmd BufWritePre * StripWhitespace
 augroup END
 
+
 " --------------------
 " delimitMate
 " --------------------
 Plug 'Raimondi/delimitMate'
 let g:delimitMate_autoclose = 0
 
+
 " --------------------
 " braceless
 " --------------------
 Plug 'tweekmonster/braceless.vim'
+
 
 " --------------------
 " vim-isort
 " --------------------
 " This sorts python imports
 Plug 'arielmakestuff/vim-isort', { 'branch': 'develop' }
+
 
 " --------------------
 " Rust
@@ -167,6 +210,46 @@ Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
 let g:racer_cmd = 'racer'
 
+
+" --------------------
+" Scratch
+" --------------------
+Plug 'mtth/scratch.vim'
+nnoremap <F4> :Scratch<CR>
+vnoremap <F4> :ScratchSelection<CR>
+inoremap <F4> <Esc>:Scratch<CR>i
+
+
+" --------------------
+"  Undotree
+" --------------------
+Plug 'mbbill/undotree'
+nnoremap <F9> :UndotreeToggle<CR>
+vnoremap <F9> <ESC>:UndotreeToggle<CR>
+inoremap <F9> <ESC>:UndotreeToggle<CR>
+
+
+" --------------------
+" Airline
+" --------------------
+Plug 'bling/vim-airline'
+let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+" Enable list of buffers
+let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#tabline#show_splits = 0
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#show_tabs = 1
+
+" Show just filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+" let g:airline_theme='badwolf'
+let g:airline_theme='oceanicnext'
+
+
 " --------------------
 " Others
 " --------------------
@@ -174,15 +257,14 @@ Plug 'honza/vim-snippets'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'mtth/scratch.vim'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'flazz/vim-colorschemes'
-Plug 'bling/vim-airline'
 Plug 'mhartington/oceanic-next'
 Plug 'marcopaganini/termschool-vim-theme'
 Plug 'edkolev/tmuxline.vim'
-Plug 'dag/vim-fish'
 Plug 'pgdouyon/vim-evanesco'
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-vinegar'
 
 
 " ------------------------
@@ -255,7 +337,8 @@ set incsearch        " do incremental searching
 " Look & Feel
 " ============================================================================
 
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+" Enable true colour (requires nvim 0.1.5+)
 set termguicolors
 
 let &guioptions = 'aegit'
@@ -271,20 +354,6 @@ colorscheme OceanicNext
 " colorscheme gruvbox
 " colorscheme termschool
 " set background=dark
-
-" Airline
-let g:airline_powerline_fonts = 1
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-
-" Enable list of buffers
-let g:airline#extensions#tabline#enabled = 0
-
-" Show just filename
-let g:airline#extensions#tabline#fnamemod = ':t'
-" let g:airline_theme='badwolf'
-let g:airline_theme='oceanicnext'
 
 
 " ============================================================================
@@ -316,7 +385,9 @@ endfunction
 " ============================================================================
 
 
+" --------------------
 " Python
+" --------------------
 augroup filetype_python
     autocmd!
     autocmd BufRead,BufNewFile *.py
@@ -340,7 +411,10 @@ augroup filetype_python
     autocmd BufWritePost *.py Neomake
 augroup END
 
+
+" --------------------
 " Rust
+" --------------------
 augroup filetype_rust
     autocmd!
     autocmd BufRead,BufNewFile *.rs
@@ -350,7 +424,10 @@ augroup filetype_rust
     autocmd BufWritePost *.rs Neomake
 augroup END
 
+
+" --------------------
 " VimScript
+" --------------------
 augroup filetype_vim
     autocmd!
     autocmd BufRead,BufNewFile *.vim
@@ -362,7 +439,10 @@ augroup filetype_vim
     autocmd BufWritePost *.vim Neomake
 augroup END
 
+
+" --------------------
 " Misc
+" --------------------
 augroup filetype_all
     autocmd!
 
@@ -383,32 +463,48 @@ augroup END
 
 
 " Key bindings for buffer next/prev
-nmap <M-l> :bn<CR>
-nmap <M-h> :bp<CR>
+nnoremap <M-l> :bn<CR>
+nnoremap <M-h> :bp<CR>
 
 " Wipe buffer
 " nmap <Leader>w :bwipeout<CR>
 
 " Delete buffer
-nmap <Leader>w :bdelete<CR>
+nnoremap <Leader>w :bdelete<CR>
 
 " Toggle hidden characters
-nmap <Leader>h :set invlist<cr>
+nnoremap <Leader>h :set invlist<cr>
 
 " Clear hlsearch
 nnoremap <Leader>/ :noh<CR>
 
 " List buffers
-nmap <Leader>l :ls<CR>
-nmap <Leader><S-l> :ls!<CR>
+nnoremap <Leader>l :ls<CR>
+nnoremap <Leader><S-l> :ls!<CR>
 
 " Spell check
-nmap <Leader>s :set spell<CR>
-nmap <Leader>S :set nospell<CR>
+nnoremap <Leader>s :set spell<CR>
+nnoremap <Leader>S :set nospell<CR>
 
 " Generic make
 " :command! -nargs=* Make make <args> | cwindow 3
 " nmap <Leader>j :Make<CR><C-w><Up>
+
+" Open previous buffer. If the buffer is closed, will re-open it
+nnoremap <S-Tab> <C-^>
+
+" Open netrw explore
+nnoremap <F2> :Texplore<CR>
+vnoremap <F2> <Esc>:Texplore<CR>
+inoremap <F2> <Esc>:Texplore<CR>
+
+" Insert timestamp
+nnoremap <F5> "=strftime("%c")<CR>P<Esc>
+inoremap <F5> <C-R>=strftime("%c")<CR>
+nnoremap <F6> "=strftime("%Y-%m-%d %H:%M:%S %Z")<CR>P<Esc>
+inoremap <F6> <C-R>=strftime("%Y-%m-%d %H:%M:%S %Z")<CR>
+nnoremap <F7> "=strftime("%Y.%m.%d.%H%M")<CR>P<Esc>
+inoremap <F7> <C-R>=strftime("%Y.%m.%d.%H%M")<CR>
 
 
 " ============================================================================
