@@ -251,6 +251,7 @@ Plug 'marcopaganini/termschool-vim-theme'
 Plug 'edkolev/tmuxline.vim'
 Plug 'pgdouyon/vim-evanesco'
 Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-vinegar'
 
 
 " ------------------------
