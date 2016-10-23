@@ -439,28 +439,28 @@ augroup END
 
 
 " Key bindings for buffer next/prev
-nmap <M-l> :bn<CR>
-nmap <M-h> :bp<CR>
+nnoremap <M-l> :bn<CR>
+nnoremap <M-h> :bp<CR>
 
 " Wipe buffer
 " nmap <Leader>w :bwipeout<CR>
 
 " Delete buffer
-nmap <Leader>w :bdelete<CR>
+nnoremap <Leader>w :bdelete<CR>
 
 " Toggle hidden characters
-nmap <Leader>h :set invlist<cr>
+nnoremap <Leader>h :set invlist<cr>
 
 " Clear hlsearch
 nnoremap <Leader>/ :noh<CR>
 
 " List buffers
-nmap <Leader>l :ls<CR>
-nmap <Leader><S-l> :ls!<CR>
+nnoremap <Leader>l :ls<CR>
+nnoremap <Leader><S-l> :ls!<CR>
 
 " Spell check
-nmap <Leader>s :set spell<CR>
-nmap <Leader>S :set nospell<CR>
+nnoremap <Leader>s :set spell<CR>
+nnoremap <Leader>S :set nospell<CR>
 
 " Generic make
 " :command! -nargs=* Make make <args> | cwindow 3
