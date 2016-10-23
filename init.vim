@@ -154,6 +154,15 @@ vnoremap <Leader>` <Esc>:Unite outline<CR>
 
 
 " --------------------
+" Ack
+" --------------------
+Plug 'mileszs/ack.vim'
+if executable('ag')
+    let g:ackprg = 'ag --vimgrep'
+endif
+
+
+" --------------------
 " Better whitespace
 " --------------------
 Plug 'ntpeters/vim-better-whitespace'
