@@ -111,11 +111,13 @@ endfunction
 " --------------------
 " FZF
 " --------------------
-" Plug 'junegunn/fzf', { 'dir': g:nvim_data_home . '/fzf',
-"             \ 'do': './install --completion --key-bindings --no-update-rc' }
-" Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'dir': g:nvim_data_home . '/fzf',
+            \ 'do': './install --completion --key-bindings --no-update-rc' }
+Plug 'junegunn/fzf.vim'
 " Plug 'junegunn/fzf', { 'do':
 "             \ './install --completion --key-bindings --no-update-rc' }
+nnoremap <F3> :FZF<CR>
+vnoremap <F3> <Esc>:FZF<CR>
 
 
 " --------------------
