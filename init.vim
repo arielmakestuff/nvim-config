@@ -11,6 +11,20 @@ if &shell =~# 'fish$'
     set shell=/bin/zsh
 endif
 
+" Default value
+" set guicursor=n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20
+set guicursor=
+
+
+" ============================================================================
+" Python Integration
+" ============================================================================
+
+
+let g:python3_hostdir = g:nvim_data_home . '/pyvenv3'
+let g:python3_host_prog = g:python3_hostdir . '/bin/python3'
+" let g:python_host_prog = 'python2.7'
+
 
 " ============================================================================
 " Plugins (vim-plug)
@@ -123,8 +137,6 @@ endfunction
 Plug 'junegunn/fzf', { 'dir': g:nvim_data_home . '/fzf',
             \ 'do': './install --completion --key-bindings --no-update-rc' }
 Plug 'junegunn/fzf.vim'
-" Plug 'junegunn/fzf', { 'do':
-"             \ './install --completion --key-bindings --no-update-rc' }
 nnoremap <F3> :FZF<CR>
 vnoremap <F3> <Esc>:FZF<CR>
 
@@ -141,26 +153,23 @@ vnoremap <F3> <Esc>:FZF<CR>
 " nnoremap <F3> :CtrlSpace O<CR>
 " vnoremap <F3> <Esc>:CtrlSpace O<CR>
 
-
 " --------------------
-"  Unite
+" Denite
 " --------------------
-Plug 'Shougo/unite.vim'
+Plug 'Shougo/denite.nvim'
 if executable('ag')
-    let g:unite_source_grep_command = 'ag'
+    call denite#custom#var('file_rec', 'command',
+                \ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
 endif
-nnoremap <C-Space> :Unite -direction=botright buffer<CR>
-vnoremap <C-Space> <Esc>:Unite -direction=botright buffer<CR>
+nnoremap <C-Space> :Denite -mode=normal -cursor-wrap=true buffer<CR>
+vnoremap <C-Space> <Esc>:Denite -mode=normal -cursor-wrap=true buffer<CR>
 
-" Fuzzy file search
-" nnoremap <F3> :Unite -direction=botright file_rec/neovim<CR>
-" vnoremap <F3> <Esc>:Unite -direction=botright file_rec/neovim<CR>
+nnoremap <Leader>` :Denite -mode=normal -cursor-wrap=true outline<CR>
+vnoremap <Leader>` <Esc>:Denite -mode=normal -cursor-wrap=true outline<CR>
 
-" Unite outline
-Plug 'Shougo/unite-outline'
-nnoremap <Leader>` :Unite -direction=botright outline<CR>gg
-vnoremap <Leader>` <Esc>:Unite -direction=botright outline<CR>gg
-let g:unite_kind_jump_list_after_jump_scroll = 100
+" " Fuzzy file search
+" " nnoremap <F3> :Denite -direction=botright file_rec<CR>
+" " vnoremap <F3> <Esc>:Denite -direction=botright file_rec<CR>
 
 
 " --------------------
@@ -255,7 +264,7 @@ let g:airline_theme='oceanicnext'
 " Others
 " --------------------
 Plug 'honza/vim-snippets'
-Plug 'tpope/vim-sensible'
+" Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'Lokaltog/vim-easymotion'
@@ -282,17 +291,6 @@ let g:neoterm_size = '10'
 
 
 call plug#end()
-
-" ============================================================================
-" Plugin initialization
-" ============================================================================
-
-
-" --------------------
-"  Unite
-" --------------------
-call unite#custom#source('outline', 'sorters', ['sorter_reverse'])
-
 
 " ============================================================================
 " Default settings
@@ -365,16 +363,6 @@ colorscheme OceanicNext
 " colorscheme gruvbox
 " colorscheme termschool
 " set background=dark
-
-
-" ============================================================================
-" Python Integration
-" ============================================================================
-
-
-let g:python3_hostdir = g:nvim_data_home . '/pyvenv3'
-let g:python3_host_prog = g:python3_hostdir . '/bin/python3'
-" let g:python_host_prog = 'python2.7'
 
 
 " ============================================================================
