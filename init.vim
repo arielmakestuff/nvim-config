@@ -7,7 +7,10 @@ let g:nvim_data_home = $XDG_DATA_HOME . '/nvim'
 let g:nvim_config_home = $XDG_CONFIG_HOME . '/nvim'
 
 " Make sure vim uses a compatible shell
-if &shell =~# 'fish$'
+if has("win32")
+    set shell=powershell.exe
+    set shellcmdflag=-Command
+elseif &shell =~# 'fish$'
     set shell=/bin/zsh
 endif
 
@@ -21,9 +24,14 @@ set guicursor=
 " ============================================================================
 
 
-let g:python3_hostdir = g:nvim_data_home . '/pyvenv3'
-let g:python3_host_prog = g:python3_hostdir . '/bin/python3'
-" let g:python_host_prog = 'python2.7'
+if has("win32")
+    let g:python3_hostdir = g:nvim_data_home . '/pyvenv35'
+    let g:python3_host_prog = g:python3_hostdir . '/Scripts/python.exe'
+else
+    let g:python3_hostdir = g:nvim_data_home . '/pyvenv3'
+    let g:python3_host_prog = g:python3_hostdir . '/bin/python3'
+    " let g:python_host_prog = 'python2.7'
+endif
 
 
 " ============================================================================
