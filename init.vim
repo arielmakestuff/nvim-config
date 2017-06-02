@@ -204,8 +204,8 @@ augroup END
 " --------------------
 " delimitMate
 " --------------------
-Plug 'Raimondi/delimitMate'
-let g:delimitMate_autoclose = 0
+" Plug 'Raimondi/delimitMate'
+" let g:delimitMate_autoclose = 0
 
 
 " --------------------
@@ -404,9 +404,9 @@ augroup filetype_python
     autocmd FileType python let g:python_highlight_exceptions=1
     autocmd FileType python let g:python_highlight_space_errors=1
 
-    " delimitMate options
-    autocmd FileType python let g:delimitMate_autoclose=1 |
-        \ let b:delimitMate_nesting_quotes = ["\"","'"]
+    " " delimitMate options
+    " autocmd FileType python let g:delimitMate_autoclose=1 |
+    "     \ let b:delimitMate_nesting_quotes = ["\"","'"]
 
     " braceless
     autocmd FileType python BracelessEnable
@@ -440,8 +440,8 @@ augroup filetype_vim
     autocmd BufRead,BufNewFile *.vim
         \ source $XDG_CONFIG_HOME/nvim/filetype/vim.vim
 
-    " delimitMate
-    autocmd FileType vim let g:delimitMate_autoclose=1
+    " " delimitMate
+    " autocmd FileType vim let g:delimitMate_autoclose=1
 
     autocmd BufWritePost *.vim Neomake
 augroup END
