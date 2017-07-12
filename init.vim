@@ -285,7 +285,7 @@ let g:airline_theme='oceanicnext'
 " Far
 " --------------------
 "  This is a multi file search and replace plugin
-Plug 'brooth/far.vim'
+Plug 'brooth/far.vim', {'do': ':UpdateRemotePlugins'}
 
 " --------------------
 " Others
@@ -344,6 +344,12 @@ if executable('ag')
     call denite#custom#var('file_rec', 'command',
                 \ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
 endif
+
+
+" --------------------
+" Far
+" --------------------
+let g:far#source='ag'
 
 
 " ============================================================================
