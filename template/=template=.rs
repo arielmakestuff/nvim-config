@@ -1,8 +1,19 @@
-// -*- coding: utf-8 -*-
 // %HERE%%FULLPATH%
 // Copyright (C) %YEAR% authors and contributors (see AUTHORS file)
 //
 // This file is released under the %LICENSE% License.
+
+// ===========================================================================
+// Externs
+// ===========================================================================
+
+
+// Stdlib externs
+
+// Third-party externs
+
+// Local externs
+
 
 // ===========================================================================
 // Imports

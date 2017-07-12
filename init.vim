@@ -53,6 +53,20 @@ nmap <Leader>x <Plug>CommentaryLine
 
 
 " --------------------
+" LanguageClient
+" --------------------
+Plug 'autozimu/LanguageClient-neovim', {'do': ':UpdateRemotePlugins'}
+" let g:LanguageClient_serverCommands = {
+"     \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
+"     \ }
+" let g:LanguageClient_autoStart = 1
+
+" " Bindings
+" nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
+" nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+
+
+" --------------------
 " deoplete
 " --------------------
 function! DoRemote(arg)
@@ -165,10 +179,10 @@ vnoremap <F3> <Esc>:FZF<CR>
 " Denite
 " --------------------
 Plug 'Shougo/denite.nvim'
-if executable('ag')
-    call denite#custom#var('file_rec', 'command',
-                \ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
-endif
+" if executable('ag')
+"     call denite#custom#var('file_rec', 'command',
+"                 \ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
+" endif
 nnoremap <C-Space> :Denite -mode=normal -cursor-wrap=true buffer<CR>
 vnoremap <C-Space> <Esc>:Denite -mode=normal -cursor-wrap=true buffer<CR>
 
@@ -305,6 +319,33 @@ let g:neoterm_size = '10'
 
 call plug#end()
 
+
+" ============================================================================
+" Plugin init
+" ============================================================================
+
+" --------------------
+" LanguageClient
+" --------------------
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
+    \ }
+let g:LanguageClient_autoStart = 1
+
+" Bindings
+nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+
+
+" --------------------
+" Denite
+" --------------------
+if executable('ag')
+    call denite#custom#var('file_rec', 'command',
+                \ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
+endif
+
+
 " ============================================================================
 " Default settings
 " ============================================================================
@@ -434,6 +475,12 @@ augroup filetype_rust
 
     " Neomake
     autocmd BufWritePost *.rs Neomake
+
+    " Rusty tags
+    autocmd BufWrite *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" .
+                \ expand('%:p:h') . "&"
+
+    autocmd FileType rust let g:neomake_open_list = 2
 augroup END
 
 
