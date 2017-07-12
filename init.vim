@@ -195,12 +195,9 @@ vnoremap <Leader>` <Esc>:Denite -mode=normal -cursor-wrap=true outline<CR>
 
 
 " --------------------
-" Ack
+" vim-grepper
 " --------------------
-Plug 'mileszs/ack.vim'
-if executable('ag')
-    let g:ackprg = 'ag --vimgrep'
-endif
+Plug 'mhinz/vim-grepper'
 
 
 " --------------------
@@ -323,6 +320,14 @@ call plug#end()
 " ============================================================================
 " Plugin init
 " ============================================================================
+
+
+" --------------------
+" vim-grepper
+" --------------------
+runtime plugin/grepper.vim
+let g:grepper.tools = ['rg', 'ag', 'git', 'ack', 'grep']
+
 
 " --------------------
 " LanguageClient
