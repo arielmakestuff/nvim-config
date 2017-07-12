@@ -267,6 +267,11 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " let g:airline_theme='badwolf'
 let g:airline_theme='oceanicnext'
 
+" --------------------
+" Far
+" --------------------
+"  This is a multi file search and replace plugin
+Plug 'brooth/far.vim'
 
 " --------------------
 " Others
