@@ -285,6 +285,13 @@ let g:airline_theme='oceanicnext'
 Plug 'brooth/far.vim', {'do': ':UpdateRemotePlugins'}
 
 " --------------------
+" Emmet
+" --------------------
+Plug 'mattn/emmet-vim'
+let g:user_emmet_install_global = 0
+" let g:user_emmet_leader_key='<C-Z>'
+
+" --------------------
 " Others
 " --------------------
 Plug 'honza/vim-snippets'
@@ -299,7 +306,6 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'pgdouyon/vim-evanesco'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-vinegar'
-
 
 " ------------------------
 " custom neoterm (tox lib)
@@ -507,6 +513,16 @@ augroup filetype_vim
     " autocmd FileType vim let g:delimitMate_autoclose=1
 
     autocmd BufWritePost *.vim Neomake
+augroup END
+
+" --------------------
+" HTML/CSS
+" --------------------
+augroup filetype_html
+    autocmd!
+    autocmd FileType html,css
+                \ source $XDG_CONFIG_HOME/nvim/filetype/html.vim |
+                \ EmmetInstall
 augroup END
 
 
