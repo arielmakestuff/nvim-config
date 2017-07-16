@@ -6,6 +6,12 @@ source $XDG_CONFIG_HOME/nvim/filetype/devel.vim
 " Rust settings
 " =====================================================
 
+
+if executable('rustfmt')
+    let g:rustfmt_autosave = 1
+endif
+
+
 " Enable gutentags
 " if !exists('g:gutentags_project_info')
 "     let g:gutentags_project_info = []
