@@ -18,7 +18,7 @@ set guicursor=
 
 " Prevent any plugins from using the virtual env, instead opting for the
 " interpreter specified by python3_host_prog
-let $VIRTUAL_ENV=''
+" let $VIRTUAL_ENV=''
 
 
 if has('win32') || has('win64')
@@ -71,14 +71,6 @@ nmap <Leader>x <Plug>CommentaryLine
 " LanguageClient
 " --------------------
 Plug 'autozimu/LanguageClient-neovim', {'do': ':UpdateRemotePlugins'}
-" let g:LanguageClient_serverCommands = {
-"     \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
-"     \ }
-" let g:LanguageClient_autoStart = 1
-
-" " Bindings
-" nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
-" nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
 
 
 " --------------------
@@ -211,8 +203,10 @@ if has('win32') || has('win64')
     nnoremap <C-Space> :Denite -mode=normal -cursor-wrap=true buffer<CR>
     vnoremap <C-Space> <Esc>:Denite -mode=normal -cursor-wrap=true buffer<CR>
 else
-    nnoremap <C-@> :Denite -mode=normal -cursor-wrap=true buffer<CR>
-    vnoremap <C-@> <Esc>:Denite -mode=normal -cursor-wrap=true buffer<CR>
+    nnoremap <C-Space> :Denite -mode=normal -cursor-wrap=true buffer<CR>
+    vnoremap <C-Space> <Esc>:Denite -mode=normal -cursor-wrap=true buffer<CR>
+    " nnoremap <C-@> :Denite -mode=normal -cursor-wrap=true buffer<CR>
+    " vnoremap <C-@> <Esc>:Denite -mode=normal -cursor-wrap=true buffer<CR>
     nnoremap <Leader>` :Denite -mode=normal -cursor-wrap=true outline<CR>
     vnoremap <Leader>` <Esc>:Denite -mode=normal -cursor-wrap=true outline<CR>
 endif
@@ -266,8 +260,9 @@ Plug 'arielmakestuff/vim-isort', { 'branch': 'develop' }
 " Rust
 " --------------------
 Plug 'rust-lang/rust.vim'
-Plug 'racer-rust/vim-racer'
-let g:racer_cmd = 'racer'
+" Plug 'racer-rust/vim-racer'
+" let g:racer_cmd = 'racer'
+let g:rust_recommended_style = 0
 
 
 " --------------------
@@ -383,7 +378,9 @@ endif
 " Bindings
 nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+nnoremap <Leader>r :call LanguageClient_textDocument_rename()<CR>
 
+" call LanguageClient_setLoggingLevel('DEBUG')
 
 " --------------------
 " Denite
@@ -528,13 +525,18 @@ augroup filetype_rust
         \ source $XDG_CONFIG_HOME/nvim/filetype/rust.vim
 
     " Neomake
-    autocmd BufWritePost *.rs Neomake
+    " autocmd BufWritePost *.rs Neomake
+
+    " RustFmt
+    autocmd BufWritePost *.rs RustFmt
 
     " Rusty tags
-    " autocmd BufWrite *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" .
-    "             \ expand('%:p:h') . "&"
+    " if !has('win32') && !has('win64')
+    "     autocmd BufWrite *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" .
+    "                 \ expand('%:p:h') . "&"
+    " endif
 
-    autocmd FileType rust let g:neomake_open_list = 2
+    " autocmd FileType rust let g:neomake_open_list = 2
 augroup END
 
 
