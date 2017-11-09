@@ -6,7 +6,7 @@ set smarttab
 set autoindent
 
 set nowrap
-set textwidth=0
+set textwidth=80
 set wrapmargin=0
 set foldcolumn=0
 

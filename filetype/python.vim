@@ -40,10 +40,6 @@ let g:neomake_python_pylama_maker = {
 let g:neomake_python_enabled_makers = ['flake8', 'pylint', 'pylama']
 " let g:neomake_python_enabled_makers = ['pylint']
 
-" Set omnifunc
-" autocmd FileType python set omnifunc=python3complete#Complete
-
-
 " Run test
 nnoremap <Leader>t :call neoterm#test#run('current')<CR>
 

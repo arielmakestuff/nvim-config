@@ -6,14 +6,6 @@
 let g:nvim_data_home = $XDG_DATA_HOME . '/nvim'
 let g:nvim_config_home = $XDG_CONFIG_HOME . '/nvim'
 
-" Make sure vim uses a compatible shell
-if has("win32")
-    set shell=powershell.exe
-    set shellcmdflag=-Command
-elseif &shell =~# 'fish$'
-    set shell=/bin/zsh
-endif
-
 " Default value
 " set guicursor=n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20
 set guicursor=
@@ -24,13 +16,36 @@ set guicursor=
 " ============================================================================
 
 
-if has("win32")
+" Prevent any plugins from using the virtual env, instead opting for the
+" interpreter specified by python3_host_prog
+let $VIRTUAL_ENV=''
+
+
+if has('win32') || has('win64')
     let g:python3_hostdir = g:nvim_data_home . '/pyvenv35'
     let g:python3_host_prog = g:python3_hostdir . '/Scripts/python.exe'
+    " let g:python36_hostdir = g:vim_data_home . '/pyvenv36'
+    " let g:python36_host_prog = g:python36_hostdir . '/Scripts/python.exe'
 else
     let g:python3_hostdir = g:nvim_data_home . '/pyvenv3'
     let g:python3_host_prog = g:python3_hostdir . '/bin/python3'
     " let g:python_host_prog = 'python2.7'
+endif
+
+
+" ============================================================================
+" Shell
+" ============================================================================
+
+
+" Make sure vim uses a compatible shell
+if has('win32') || has('win64')
+    " set shell=powershell.exe
+    " set shellcmdflag=-Command
+    let &shell='cmd.exe'
+    let $PATH= g:python3_hostdir . '/Scripts;' . $PATH
+elseif &shell =~# 'fish$'
+    set shell=/bin/zsh
 endif
 
 
@@ -110,6 +125,14 @@ let g:neomake_list_height = 4
 
 
 " --------------------
+" ALE
+" --------------------
+" Plug 'w0rp/ale'
+" let g:ale_sign_column_always = 1
+" let g:ale_open_list = 1
+" let g:ale_list_window_size = 5
+
+" --------------------
 " gutentags
 " --------------------
 Plug 'ludovicchabant/vim-gutentags'
@@ -145,7 +168,11 @@ let g:templates_user_variables = [
     \ ]
 
 function! Template_GetFullPath()
-    return expand('%:p')
+    let l:ret = expand('%:p')
+    if has('win32') || has('win64')
+        let l:ret = escape(l:ret, '\')
+    endif
+    return l:ret
 endfunction
 
 function! Template_PrettyDate()
@@ -179,19 +206,22 @@ vnoremap <F3> <Esc>:FZF<CR>
 " Denite
 " --------------------
 Plug 'Shougo/denite.nvim'
-" if executable('ag')
-"     call denite#custom#var('file_rec', 'command',
-"                 \ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
-" endif
-nnoremap <C-Space> :Denite -mode=normal -cursor-wrap=true buffer<CR>
-vnoremap <C-Space> <Esc>:Denite -mode=normal -cursor-wrap=true buffer<CR>
+" C-@ is Control-Space
+if has('win32') || has('win64')
+    nnoremap <C-Space> :Denite -mode=normal -cursor-wrap=true buffer<CR>
+    vnoremap <C-Space> <Esc>:Denite -mode=normal -cursor-wrap=true buffer<CR>
+else
+    nnoremap <C-@> :Denite -mode=normal -cursor-wrap=true buffer<CR>
+    vnoremap <C-@> <Esc>:Denite -mode=normal -cursor-wrap=true buffer<CR>
+    nnoremap <Leader>` :Denite -mode=normal -cursor-wrap=true outline<CR>
+    vnoremap <Leader>` <Esc>:Denite -mode=normal -cursor-wrap=true outline<CR>
+endif
 
-nnoremap <Leader>` :Denite -mode=normal -cursor-wrap=true outline<CR>
-vnoremap <Leader>` <Esc>:Denite -mode=normal -cursor-wrap=true outline<CR>
 
 " " Fuzzy file search
 " " nnoremap <F3> :Denite -direction=botright file_rec<CR>
 " " vnoremap <F3> <Esc>:Denite -direction=botright file_rec<CR>
+
 
 
 " --------------------
@@ -346,7 +376,9 @@ let g:grepper.tools = ['rg', 'ag', 'git', 'ack', 'grep']
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
     \ }
-let g:LanguageClient_autoStart = 1
+if !has('win32') && !has('win64')
+    let g:LanguageClient_autoStart = 1
+endif
 
 " Bindings
 nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
@@ -499,8 +531,8 @@ augroup filetype_rust
     autocmd BufWritePost *.rs Neomake
 
     " Rusty tags
-    autocmd BufWrite *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" .
-                \ expand('%:p:h') . "&"
+    " autocmd BufWrite *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" .
+    "             \ expand('%:p:h') . "&"
 
     autocmd FileType rust let g:neomake_open_list = 2
 augroup END
@@ -530,6 +562,14 @@ augroup filetype_html
                 \ EmmetInstall
 augroup END
 
+" --------------------
+" Javascript
+" --------------------
+augroup filetype_js_jsx
+    autocmd!
+    autocmd FileType javascript.jsx
+                \ source $XDG_CONFIG_HOME/nvim/filetype/javascript_jsx.vim
+augroup END
 
 " --------------------
 " Misc

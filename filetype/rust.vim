@@ -25,36 +25,8 @@ endif
 " Rusty tags
 setlocal tags+=$RUST_SRC_PATH/tags
 
-" Neomake
-" let g:neomake_rust_rustc_maker = {
-"     \ 'exe': 'rustc',
-"     \ 'args': ['-Z', 'parse-only'],
-"     \ 'errorformat':
-"         \ ',' .
-"         \ '%Eerror: %m,' .
-"         \ '%Eerror[E%n]: %m,' .
-"         \ '%Wwarning: %m,' .
-"         \ '%Inote: %m,' .
-"         \ '%C %#--> %f:%l:%c,' .
-"         \ '%C%.%#'
-"     \ }
-" let g:neomake_rust_cargo_maker = {
-"     \ 'exe': 'cargo',
-"     \ 'args': ['rustc', '-Zno-trans'],
-"     \ 'append_file': 0,
-"     \ 'errorformat':
-"         \ ',' .
-"         \ '%Eerror: %m,' .
-"         \ '%Eerror[E%n]: %m,' .
-"         \ '%Wwarning: %m,' .
-"         \ '%Inote: %m,' .
-"         \ '%C %#--> %f:%l:%c,' .
-"         \ '%C%.%#'
-"     \ }
-" let g:neomake_rust_enabled_makers = ['rustc']
-
 " Bindings
-nnoremap <Leader>r :call LanguageClient_textDocument_rename()<CR>
+" nnoremap <Leader>r :call LanguageClient_textDocument_rename()<CR>
 
 
 " ============================================================================
