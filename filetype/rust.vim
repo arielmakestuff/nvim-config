@@ -11,10 +11,12 @@ if executable('rustup') && executable('rustfmt')
     " Manually set rustfmt command
     let g:rustfmt_command = 'rustup run nightly rustfmt'
 
-    " Enable rustfmt run on autosave
-    " let g:rustfmt_autosave = 1
+    " Enable rustfmt run on save
+    let g:rustfmt_autosave = 1
 endif
 
+" Check all files including test files
+let g:neomake_rust_cargo_command = ['test', '--no-run']
 
 " Enable gutentags
 " if !exists('g:gutentags_project_info')

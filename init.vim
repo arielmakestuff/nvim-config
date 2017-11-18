@@ -528,7 +528,7 @@ augroup filetype_rust
     " autocmd BufWritePost *.rs Neomake
 
     " RustFmt
-    autocmd BufWritePost *.rs RustFmt
+    " autocmd BufWritePost *.rs RustFmt
 
     " Rusty tags
     " if !has('win32') && !has('win64')
@@ -536,7 +536,7 @@ augroup filetype_rust
     "                 \ expand('%:p:h') . "&"
     " endif
 
-    " autocmd FileType rust let g:neomake_open_list = 2
+    autocmd FileType rust let g:neomake_open_list = 2
 augroup END
 
 
