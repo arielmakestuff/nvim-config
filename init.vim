@@ -322,6 +322,18 @@ let g:user_emmet_install_global = 0
 Plug 'tpope/vim-projectionist'
 
 " --------------------
+" Text objects &
+" Expand region
+" --------------------
+" vim-textobj-user is required for vim-textobj-entire, vim-textobj-line, and
+" vim-textobj-indent
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-entire'
+Plug 'kana/vim-textobj-line'
+Plug 'kana/vim-textobj-indent'
+Plug 'terryma/vim-expand-region'
+
+" --------------------
 " Others
 " --------------------
 Plug 'honza/vim-snippets'
@@ -356,6 +368,44 @@ call plug#end()
 " ============================================================================
 " Plugin init
 " ============================================================================
+
+" --------------------
+" Expand region
+" --------------------
+" Extend the global default:
+"
+" - \n\n: Motions are supported as well. Here's a search motion that finds a
+"   blank line
+"
+" - a]: Support nesting of 'around' brackets
+"
+" - ab: Support nesting of 'around' parentheses
+"
+" - aB: Support nesting of 'around' braces
+"
+" - ii: 'inside indent'. Available through
+"   https://github.com/kana/vim-textobj-indent
+"
+" - ai: 'around indent'. Available through
+"   https://github.com/kana/vim-textobj-indent
+"
+" - il: 'inside line'. Available through
+"   https://github.com/kana/vim-textobj-line
+"
+" - al: 'around line'. Available through
+"   https://github.com/kana/vim-textobj-line
+"
+" Note: Expanding is triggered via '+', and shrinking is triggered via '-'
+call expand_region#custom_text_objects({
+      \ "\/\\n\\n\<CR>": 1,
+      \ 'a]' :1,
+      \ 'ab' :1,
+      \ 'aB' :1,
+      \ 'ii' :0,
+      \ 'ai' :0,
+      \ 'il' :0,
+      \ 'al' :0,
+      \ })
 
 
 " --------------------
