@@ -429,6 +429,7 @@ set laststatus=2
 set ttimeoutlen=0
 set clipboard=unnamed
 set showmatch
+set number
 
 " spell check
 set nospell
@@ -475,7 +476,7 @@ colorscheme OceanicNext
 " ============================================================================
 
 
-function ModeChange()
+function! ModeChange()
     if getline(1) =~? '^#!'
         if getline(1) =~# '/bin/'
             silent !chmod a+x <afile>
@@ -484,9 +485,28 @@ function ModeChange()
 endfunction
 
 
+function! RelNumberToggle()
+    if(&relativenumber == 1)
+        set norelativenumber
+    else
+        set relativenumber
+    endif
+endfunction
+
+
 " ============================================================================
 " Auto Commands
 " ============================================================================
+
+
+" --------------------
+" Set relative number
+" --------------------
+augroup numbertoggle
+    autocmd!
+    autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+    autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
 
 
 " --------------------
@@ -594,6 +614,8 @@ augroup END
 " Keybindings
 " ============================================================================
 
+" Toggle relative numbers
+nnoremap <F10> :call RelNumberToggle()<CR>
 
 " Key bindings for buffer next/prev
 nnoremap <M-l> :bn<CR>

@@ -11,4 +11,3 @@ set wrapmargin=0
 set foldcolumn=0
 
 set nospell
-set number
