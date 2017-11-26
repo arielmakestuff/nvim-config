@@ -480,6 +480,7 @@ set ttimeoutlen=0
 set clipboard=unnamed
 set showmatch
 set number
+set title
 
 " spell check
 set nospell
