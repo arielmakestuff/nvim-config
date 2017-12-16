@@ -335,13 +335,18 @@ Plug 'kana/vim-textobj-indent'
 Plug 'terryma/vim-expand-region'
 
 " --------------------
+" Motions
+" --------------------
+" Plug 'Lokaltog/vim-easymotion'
+Plug 'justinmk/vim-sneak'
+
+" --------------------
 " Others
 " --------------------
 Plug 'honza/vim-snippets'
 " Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'Lokaltog/vim-easymotion'
 Plug 'flazz/vim-colorschemes'
 Plug 'mhartington/oceanic-next'
 Plug 'marcopaganini/termschool-vim-theme'
@@ -446,6 +451,11 @@ endif
 " Far
 " --------------------
 let g:far#source='ag'
+
+" --------------------
+" Sneak
+" --------------------
+" let g:sneak#label = 1
 
 
 " ============================================================================
