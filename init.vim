@@ -70,38 +70,42 @@ nmap <Leader>x <Plug>CommentaryLine
 " --------------------
 " LanguageClient
 " --------------------
-Plug 'autozimu/LanguageClient-neovim', {'do': ':UpdateRemotePlugins'}
-" Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': './install.sh'}
+" Plug 'autozimu/LanguageClient-neovim', {'do': ':UpdateRemotePlugins'}
+Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': './install.sh'}
 
 
 " --------------------
 " deoplete
 " --------------------
-function! DoRemote(arg)
-    UpdateRemotePlugins
-endfunction
-Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#enable_smart_case = 1
+" function! DoRemote(arg)
+"     UpdateRemotePlugins
+" endfunction
+" Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+" let g:deoplete#enable_at_startup = 1
+" let g:deoplete#enable_smart_case = 1
 
+" --------------------
+" nvim-completion-manager
+" --------------------
+Plug 'roxma/nvim-completion-manager'
 
 " --------------------
 " deoplete-jedi
 " --------------------
-Plug 'zchee/deoplete-jedi'
-if exists(':DeopleteEnable')
-    let g:jedi#completions_enabled = 0
-    let g:jedi#auto_vim_configuration = 0
-    let g:jedi#smart_auto_mappings = 0
-    let g:jedi#show_call_signatures = 0
-endif
+" Plug 'zchee/deoplete-jedi'
+" if exists(':DeopleteEnable')
+"     let g:jedi#completions_enabled = 0
+"     let g:jedi#auto_vim_configuration = 0
+"     let g:jedi#smart_auto_mappings = 0
+"     let g:jedi#show_call_signatures = 0
+" endif
 
 
 " --------------------
 " jedi
 " --------------------
-Plug 'davidhalter/jedi-vim'
-let g:jedi#force_py_version = 3
+" Plug 'davidhalter/jedi-vim'
+" let g:jedi#force_py_version = 3
 " let g:jedi#completions_enabled = 0
 " let g:jedi#auto_vim_configuration = 0
 " let g:jedi#smart_auto_mappings = 0
@@ -111,19 +115,19 @@ let g:jedi#force_py_version = 3
 " --------------------
 " neomake
 " --------------------
-Plug 'benekastah/neomake'
-nmap <Leader>j :Neomake<CR>
-let g:neomake_open_list = 1
-let g:neomake_list_height = 4
+" Plug 'benekastah/neomake'
+" nmap <Leader>j :Neomake<CR>
+" let g:neomake_open_list = 1
+" let g:neomake_list_height = 4
 
 
 " --------------------
 " ALE
 " --------------------
-" Plug 'w0rp/ale'
+Plug 'w0rp/ale'
 " let g:ale_sign_column_always = 1
-" let g:ale_open_list = 1
-" let g:ale_list_window_size = 5
+let g:ale_open_list = 1
+let g:ale_list_window_size = 5
 
 " --------------------
 " gutentags
@@ -420,12 +424,20 @@ call expand_region#custom_text_objects({
 runtime plugin/grepper.vim
 let g:grepper.tools = ['rg', 'ag', 'git', 'ack', 'grep']
 
+" --------------------
+" Rustup vars
+" --------------------
+" let g:rustup_toolchain = 'nightly-2017-12-21'
+let g:rustup_toolchain = 'nightly'
+" let g:rustup_toolchain = 'beta'
 
 " --------------------
 " LanguageClient
 " --------------------
 let g:LanguageClient_serverCommands = {
-    \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
+    \ 'rust': ['rustup', 'run', g:rustup_toolchain, 'rls'],
+    \ 'python': ['pyls'],
+    \ 'javascript.jsx': ['javascript-typescript-stdio'],
     \ }
 if !has('win32') && !has('win64')
     let g:LanguageClient_autoStart = 1
@@ -436,7 +448,10 @@ nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
 nnoremap <Leader>r :call LanguageClient_textDocument_rename()<CR>
 
+set completefunc=LanguageClient#complete
+
 " call LanguageClient_setLoggingLevel('DEBUG')
+" let g:LanguageClient_loggingLevel = 'DEBUG'
 
 " --------------------
 " Denite
@@ -456,6 +471,12 @@ let g:far#source='ag'
 " Sneak
 " --------------------
 " let g:sneak#label = 1
+
+" --------------------
+" ALE
+" --------------------
+"   ~always keep the signcolumn open!!
+" set signcolumn=yes
 
 
 " ============================================================================
@@ -562,6 +583,16 @@ endfunction
 
 
 " --------------------
+" LanguageClient-neovim
+" --------------------
+" augroup LanguageClient_config
+"   autocmd!
+"   autocmd User LanguageClientStarted setlocal signcolumn=yes
+"   autocmd User LanguageClientStopped setlocal signcolumn=yes
+" augroup END
+
+
+" --------------------
 " Set relative number
 " --------------------
 augroup numbertoggle
@@ -578,7 +609,7 @@ augroup filetype_python
     autocmd!
     autocmd BufRead,BufNewFile *.py
         \ source $XDG_CONFIG_HOME/nvim/filetype/python.vim
-    autocmd FileType python set omnifunc=python3complete#Complete
+    " autocmd FileType python set omnifunc=python3complete#Complete
     autocmd FileType python let g:python_highlight_numbers=1
     autocmd FileType python let g:python_highlight_exceptions=1
     autocmd FileType python let g:python_highlight_space_errors=1
@@ -594,7 +625,7 @@ augroup filetype_python
     " autocmd BufWritePre *.py Isort
 
     " Neomake
-    autocmd BufWritePost *.py Neomake
+    " autocmd BufWritePost *.py Neomake
 augroup END
 
 
@@ -605,6 +636,11 @@ augroup filetype_rust
     autocmd!
     autocmd BufRead,BufNewFile *.rs
         \ source $XDG_CONFIG_HOME/nvim/filetype/rust.vim
+
+    " --------------------
+    " ALE
+    " --------------------
+    " let g:ale_linters = {'rust': ['rls']}
 
     " Neomake
     " autocmd BufWritePost *.rs Neomake
@@ -618,7 +654,7 @@ augroup filetype_rust
     "                 \ expand('%:p:h') . "&"
     " endif
 
-    autocmd FileType rust let g:neomake_open_list = 2
+    " autocmd FileType rust let g:neomake_open_list = 2
 augroup END
 
 
@@ -633,7 +669,7 @@ augroup filetype_vim
     " " delimitMate
     " autocmd FileType vim let g:delimitMate_autoclose=1
 
-    autocmd BufWritePost *.vim Neomake
+    " autocmd BufWritePost *.vim Neomake
 augroup END
 
 " --------------------

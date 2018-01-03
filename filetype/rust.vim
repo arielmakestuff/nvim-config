@@ -9,7 +9,7 @@ source $XDG_CONFIG_HOME/nvim/filetype/devel.vim
 
 if executable('rustup') && executable('rustfmt')
     " Manually set rustfmt command
-    let g:rustfmt_command = 'rustup run nightly rustfmt'
+    let g:rustfmt_command = 'rustup run ' . g:rustup_toolchain . ' rustfmt'
 
     " Enable rustfmt run on save
     let g:rustfmt_autosave = 1
