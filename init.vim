@@ -70,8 +70,13 @@ nmap <Leader>x <Plug>CommentaryLine
 " --------------------
 " LanguageClient
 " --------------------
+let g:lsp_install_cmd = './install.sh'
+if has('win32') || has('win64')
+    let g:lsp_install_cmd = 'powershell ./install.ps1'
+endif
+
 " Plug 'autozimu/LanguageClient-neovim', {'do': ':UpdateRemotePlugins'}
-Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': './install.sh'}
+Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': g:lsp_install_cmd}
 
 
 " --------------------
@@ -432,12 +437,22 @@ let g:rustup_toolchain = 'nightly'
 " let g:rustup_toolchain = 'beta'
 
 " --------------------
+" Javascript vars
+" --------------------
+let g:lsp_javascript_cmd = ['javascript-typescript-stdio']
+if has('win32') || has('win64')
+    g:lsp_javascript_cmd[0] = g:lsp_javascript_cmd[0] . '.cmd'
+    let g:lsp_javascript_cmd = ['cmd', '/C'] + g:lsp_javascript_cmd
+endif
+
+" --------------------
 " LanguageClient
 " --------------------
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['rustup', 'run', g:rustup_toolchain, 'rls'],
     \ 'python': ['pyls'],
-    \ 'javascript.jsx': ['javascript-typescript-stdio'],
+    \ 'javascript': g:lsp_javascript_cmd,
+    \ 'javascript.jsx': g:lsp_javascript_cmd,
     \ }
 let g:LanguageClient_autoStart = 1
 " if !has('win32') && !has('win64')
@@ -688,7 +703,7 @@ augroup END
 " --------------------
 augroup filetype_js_jsx
     autocmd!
-    autocmd FileType javascript.jsx
+    autocmd FileType javascript,javascript.jsx
                 \ source $XDG_CONFIG_HOME/nvim/filetype/javascript_jsx.vim
 augroup END
 
