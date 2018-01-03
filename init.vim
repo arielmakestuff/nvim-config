@@ -18,11 +18,11 @@ set guicursor=
 
 " Prevent any plugins from using the virtual env, instead opting for the
 " interpreter specified by python3_host_prog
-" let $VIRTUAL_ENV=''
+let $VIRTUAL_ENV=''
 
 
 if has('win32') || has('win64')
-    let g:python3_hostdir = g:nvim_data_home . '/pyvenv35'
+    let g:python3_hostdir = g:nvim_data_home . '/pyvenv36'
     let g:python3_host_prog = g:python3_hostdir . '/Scripts/python.exe'
     " let g:python36_hostdir = g:vim_data_home . '/pyvenv36'
     " let g:python36_host_prog = g:python36_hostdir . '/Scripts/python.exe'
@@ -177,14 +177,14 @@ function! Template_PrettyDate()
 endfunction
 
 
-" --------------------
-" FZF
-" --------------------
-Plug 'junegunn/fzf', { 'dir': g:nvim_data_home . '/fzf',
-            \ 'do': './install --completion --key-bindings --no-update-rc' }
-Plug 'junegunn/fzf.vim'
-nnoremap <F3> :FZF<CR>
-vnoremap <F3> <Esc>:FZF<CR>
+" " --------------------
+" " FZF
+" " --------------------
+" Plug 'junegunn/fzf', { 'dir': g:nvim_data_home . '/fzf',
+"             \ 'do': './install --completion --key-bindings --no-update-rc' }
+" Plug 'junegunn/fzf.vim'
+" nnoremap <F3> :FZF<CR>
+" vnoremap <F3> <Esc>:FZF<CR>
 
 
 " --------------------
@@ -223,10 +223,10 @@ endif
 
 
 
-" --------------------
-" vim-grepper
-" --------------------
-Plug 'mhinz/vim-grepper'
+" " --------------------
+" " vim-grepper
+" " --------------------
+" Plug 'mhinz/vim-grepper'
 
 
 " --------------------
@@ -418,11 +418,11 @@ call expand_region#custom_text_objects({
       \ })
 
 
-" --------------------
-" vim-grepper
-" --------------------
-runtime plugin/grepper.vim
-let g:grepper.tools = ['rg', 'ag', 'git', 'ack', 'grep']
+" " --------------------
+" " vim-grepper
+" " --------------------
+" runtime plugin/grepper.vim
+" let g:grepper.tools = ['rg', 'ag', 'git', 'ack', 'grep']
 
 " --------------------
 " Rustup vars
@@ -439,9 +439,10 @@ let g:LanguageClient_serverCommands = {
     \ 'python': ['pyls'],
     \ 'javascript.jsx': ['javascript-typescript-stdio'],
     \ }
-if !has('win32') && !has('win64')
-    let g:LanguageClient_autoStart = 1
-endif
+let g:LanguageClient_autoStart = 1
+" if !has('win32') && !has('win64')
+"     let g:LanguageClient_autoStart = 1
+" endif
 
 " Bindings
 nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>

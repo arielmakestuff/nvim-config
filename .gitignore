@@ -3,4 +3,6 @@
 .netrwhist
 plugged/
 *.log
+*.swp
 /tags
+/rplugin.vim
