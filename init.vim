@@ -546,6 +546,9 @@ set ruler            " show the cursor position all the time
 set showcmd          " display incomplete commands
 set incsearch        " do incremental searching
 
+" always use unix fileformat for new buffers
+set fileformats=unix,dos
+
 
 " ============================================================================
 " Look & Feel
