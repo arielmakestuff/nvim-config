@@ -15,6 +15,9 @@ set nospell
 " ------------------------------
 " Set underline for current line
 " ------------------------------
-hi clear CursorLine
-hi CursorLine gui=underline cterm=underline ctermfg=None guifg=None
-set cursorline
+" Disable this only on windows since this doesn't work properly with nvim-qt
+if !g:has_windows
+    hi clear CursorLine
+    hi CursorLine gui=underline cterm=underline ctermfg=None guifg=None
+    set cursorline
+endif

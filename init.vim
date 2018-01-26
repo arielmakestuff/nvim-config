@@ -5,6 +5,7 @@
 
 let g:nvim_data_home = $XDG_DATA_HOME . '/nvim'
 let g:nvim_config_home = $XDG_CONFIG_HOME . '/nvim'
+let g:has_windows = has('win32') || has('win64')
 
 " Default value
 " set guicursor=n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20
@@ -21,7 +22,7 @@ set guicursor=
 let $VIRTUAL_ENV=''
 
 
-if has('win32') || has('win64')
+if g:has_windows
     let g:python3_hostdir = g:nvim_data_home . '/pyvenv36'
     let g:python3_host_prog = g:python3_hostdir . '/Scripts/python.exe'
     " let g:python36_hostdir = g:vim_data_home . '/pyvenv36'
@@ -39,7 +40,7 @@ endif
 
 
 " Make sure vim uses a compatible shell
-if has('win32') || has('win64')
+if g:has_windows
     " set shell=powershell.exe
     " set shellcmdflag=-Command
     let &shell='cmd.exe'
@@ -71,7 +72,7 @@ nmap <Leader>x <Plug>CommentaryLine
 " LanguageClient
 " --------------------
 let g:lsp_install_cmd = './install.sh'
-if has('win32') || has('win64')
+if g:has_windows
     let g:lsp_install_cmd = 'powershell ./install.ps1'
 endif
 
@@ -120,19 +121,15 @@ Plug 'roxma/nvim-completion-manager'
 " --------------------
 " neomake
 " --------------------
-" Plug 'benekastah/neomake'
-" nmap <Leader>j :Neomake<CR>
-" let g:neomake_open_list = 1
-" let g:neomake_list_height = 4
-
+Plug 'benekastah/neomake'
 
 " --------------------
 " ALE
 " --------------------
 Plug 'w0rp/ale'
-" let g:ale_sign_column_always = 1
-let g:ale_open_list = 1
-let g:ale_list_window_size = 5
+
+" Disable the error message advising of conflict with neomake
+let g:ale_emit_conflict_warnings = 0
 
 " --------------------
 " gutentags
@@ -171,7 +168,7 @@ let g:templates_user_variables = [
 
 function! Template_GetFullPath()
     let l:ret = expand('%:p')
-    if has('win32') || has('win64')
+    if g:has_windows
         let l:ret = escape(l:ret, '\')
     endif
     return l:ret
@@ -209,7 +206,7 @@ endfunction
 " --------------------
 Plug 'Shougo/denite.nvim'
 " C-@ is Control-Space
-if has('win32') || has('win64')
+if g:has_windows
     nnoremap <C-Space> :Denite -mode=normal -cursor-wrap=true buffer<CR>
     vnoremap <C-Space> <Esc>:Denite -mode=normal -cursor-wrap=true buffer<CR>
 else
@@ -440,7 +437,7 @@ let g:rustup_toolchain = 'nightly'
 " Javascript vars
 " --------------------
 let g:lsp_javascript_cmd = ['javascript-typescript-stdio']
-if has('win32') || has('win64')
+if g:has_windows
     g:lsp_javascript_cmd[0] = g:lsp_javascript_cmd[0] . '.cmd'
     let g:lsp_javascript_cmd = ['cmd', '/C'] + g:lsp_javascript_cmd
 endif
@@ -493,6 +490,24 @@ let g:far#source='ag'
 " --------------------
 "   ~always keep the signcolumn open!!
 " set signcolumn=yes
+" let g:ale_sign_column_always = 1
+let g:ale_open_list = 1
+let g:ale_list_window_size = 5
+if g:has_windows
+    let g:ale_lint_on_text_changed = 'never'
+endif
+
+" --------------------
+" Neomake
+" --------------------
+nmap <Leader>j :Neomake<CR>
+nmap <Leader>J :Neomake!<CR>
+let g:neomake_open_list = 1
+let g:neomake_list_height = 4
+
+" When writing a buffer, and on normal mode changes (after 750ms).
+" call neomake#configure#automake('riw', 750)
+" let g:neomake_verbose = 3
 
 
 " ============================================================================

@@ -16,7 +16,7 @@ if executable('rustup')
 endif
 
 " Check all files including test files
-let g:neomake_rust_cargo_command = ['test', '--no-run']
+" let g:neomake_rust_cargo_command = ['test', '--no-run']
 
 " Enable gutentags
 " if !exists('g:gutentags_project_info')
