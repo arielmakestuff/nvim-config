@@ -159,3 +159,8 @@ setup =
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- vim-surround
+
+[bundle/vim-colorschemes]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- vim-colorschemes
