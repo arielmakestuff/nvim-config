@@ -94,3 +94,8 @@ setup =
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- undotree
+
+[bundle/vim-airline]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- vim-airline
