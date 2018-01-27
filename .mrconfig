@@ -84,3 +84,8 @@ setup =
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- rust.vim
+
+[bundle/scratch.vim]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- scratch.vim
