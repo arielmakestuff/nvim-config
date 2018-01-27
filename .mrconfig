@@ -79,3 +79,8 @@ setup =
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- vim-isort
+
+[bundle/rust.vim]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- rust.vim

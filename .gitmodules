@@ -41,3 +41,6 @@
 	branch = develop
 	path = bundle/vim-isort
 	url = https://github.com/arielmakestuff/vim-isort
+[submodule "bundle/rust.vim"]
+	path = bundle/rust.vim
+	url = https://github.com/rust-lang/rust.vim
