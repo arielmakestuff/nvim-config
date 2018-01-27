@@ -34,3 +34,8 @@ setup =
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- neomake
+
+[bundle/ale]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- ale
