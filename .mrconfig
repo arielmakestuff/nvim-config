@@ -54,3 +54,8 @@ setup =
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- ultisnips
+
+[bundle/vim-template]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- vim-template
