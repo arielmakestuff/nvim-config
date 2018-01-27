@@ -44,3 +44,8 @@ setup =
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- vim-gutentags
+
+[bundle/tagbar]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- tagbar
