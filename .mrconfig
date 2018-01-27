@@ -74,3 +74,8 @@ setup =
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- braceless.vim
+
+[bundle/vim-isort]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- vim-isort

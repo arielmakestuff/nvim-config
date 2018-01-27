@@ -37,3 +37,7 @@
 [submodule "bundle/braceless.vim"]
 	path = bundle/braceless.vim
 	url = https://github.com/tweekmonster/braceless.vim
+[submodule "bundle/vim-isort"]
+	branch = develop
+	path = bundle/vim-isort
+	url = https://github.com/arielmakestuff/vim-isort
