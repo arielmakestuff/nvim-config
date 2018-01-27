@@ -69,3 +69,8 @@ setup =
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- vim-better-whitespace
+
+[bundle/braceless.vim]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- braceless.vim
