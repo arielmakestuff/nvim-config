@@ -104,3 +104,8 @@ setup =
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- far.vim
+
+[bundle/emmet-vim]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- emmet-vim
