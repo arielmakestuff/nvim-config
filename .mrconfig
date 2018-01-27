@@ -184,3 +184,8 @@ setup =
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- vim-evanesco
+
+[bundle/vim-polyglot]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- vim-polyglot

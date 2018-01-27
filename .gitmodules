@@ -104,3 +104,6 @@
 [submodule "bundle/vim-evanesco"]
 	path = bundle/vim-evanesco
 	url = https://github.com/pgdouyon/vim-evanesco
+[submodule "bundle/vim-polyglot"]
+	path = bundle/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot
