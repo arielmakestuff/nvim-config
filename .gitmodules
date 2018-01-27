@@ -101,3 +101,6 @@
 [submodule "bundle/tmuxline.vim"]
 	path = bundle/tmuxline.vim
 	url = https://github.com/edkolev/tmuxline.vim
+[submodule "bundle/vim-evanesco"]
+	path = bundle/vim-evanesco
+	url = https://github.com/pgdouyon/vim-evanesco

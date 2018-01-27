@@ -179,3 +179,8 @@ setup =
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- tmuxline.vim
+
+[bundle/vim-evanesco]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- vim-evanesco
