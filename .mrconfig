@@ -29,3 +29,8 @@ setup =
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- nvim-completion-manager
+
+[bundle/neomake]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- neomake
