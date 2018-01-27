@@ -1,0 +1,8 @@
+[DEFAULT]
+submodule = git submodule update --init --recursive
+git_gc = git gc "$@"
+
+[setup/vim-pathogen]
+pathogen =
+    mkdir -p ../../autoload
+    cp autoload/pathogen.vim ../../autoload
