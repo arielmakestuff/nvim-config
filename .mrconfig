@@ -89,3 +89,8 @@ setup =
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- scratch.vim
+
+[bundle/undotree]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- undotree
