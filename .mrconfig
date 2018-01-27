@@ -139,3 +139,8 @@ setup =
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- vim-expand-region
+
+[bundle/vim-sneak]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- vim-sneak
