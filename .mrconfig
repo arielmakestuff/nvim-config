@@ -4,6 +4,7 @@ git_gc = git gc "$@"
 recent =
 	   git fetch
 	   git log origin
+log = git log --oneline --decorate --all --graph
 
 [setup/vim-pathogen]
 setup =
