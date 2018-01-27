@@ -49,3 +49,8 @@ setup =
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- tagbar
+
+[bundle/ultisnips]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- ultisnips
