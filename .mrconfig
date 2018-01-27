@@ -4,7 +4,9 @@ git_gc = git gc "$@"
 
 [setup/vim-pathogen]
 setup =
-    cd ../..
-    mkdir -p autoload
-    git submodule update --init --recursive
-    cp setup/vim-pathogen/autoload/pathogen.vim autoload
+	   cd ../..
+	   mkdir -p autoload
+	   git submodule update --init --recursive
+	   cp setup/vim-pathogen/autoload/pathogen.vim autoload
+
+[bundle/vim-commentary]
