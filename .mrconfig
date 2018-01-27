@@ -164,3 +164,8 @@ setup =
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- vim-colorschemes
+
+[bundle/oceanic-next]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- oceanic-next

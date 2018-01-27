@@ -92,3 +92,6 @@
 [submodule "bundle/vim-colorschemes"]
 	path = bundle/vim-colorschemes
 	url = https://github.com/flazz/vim-colorschemes
+[submodule "bundle/oceanic-next"]
+	path = bundle/oceanic-next
+	url = https://github.com/mhartington/oceanic-next
