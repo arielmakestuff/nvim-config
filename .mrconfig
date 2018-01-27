@@ -189,3 +189,8 @@ setup =
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- vim-polyglot
+
+[bundle/vim-vinegar]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- vim-vinegar
