@@ -194,3 +194,8 @@ setup =
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- vim-vinegar
+
+[bundle/neoterm]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- neoterm

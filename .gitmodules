@@ -110,3 +110,7 @@
 [submodule "bundle/vim-vinegar"]
 	path = bundle/vim-vinegar
 	url = https://github.com/tpope/vim-vinegar
+[submodule "bundle/neoterm"]
+	path = bundle/neoterm
+	url = https://github.com/arielmakestuff/neoterm
+	branch = develop
