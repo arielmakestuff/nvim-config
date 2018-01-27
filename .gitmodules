@@ -98,3 +98,6 @@
 [submodule "bundle/termschool-vim-theme"]
 	path = bundle/termschool-vim-theme
 	url = https://github.com/marcopaganini/termschool-vim-theme
+[submodule "bundle/tmuxline.vim"]
+	path = bundle/tmuxline.vim
+	url = https://github.com/edkolev/tmuxline.vim

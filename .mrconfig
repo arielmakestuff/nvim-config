@@ -174,3 +174,8 @@ setup =
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- termschool-vim-theme
+
+[bundle/tmuxline.vim]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- tmuxline.vim
