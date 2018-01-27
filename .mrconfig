@@ -149,3 +149,8 @@ setup =
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- vim-snippets
+
+[bundle/vim-fugitive]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- vim-fugitive
