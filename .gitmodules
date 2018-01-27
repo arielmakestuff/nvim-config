@@ -5,6 +5,7 @@
 	path = bundle/vim-commentary
 	url = https://github.com/tpope/vim-commentary
 [submodule "bundle/LanguageClient-neovim"]
+	branch = next
 	path = bundle/LanguageClient-neovim
 	url = https://github.com/autozimu/LanguageClient-neovim
 [submodule "bundle/nvim-completion-manager"]
