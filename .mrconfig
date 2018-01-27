@@ -109,3 +109,8 @@ setup =
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- emmet-vim
+
+[bundle/vim-projectionist]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- vim-projectionist
