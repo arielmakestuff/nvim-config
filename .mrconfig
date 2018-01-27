@@ -114,3 +114,28 @@ setup =
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- vim-projectionist
+
+[bundle/vim-textobj-user]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- vim-textobj-user
+
+[bundle/vim-textobj-entire]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- vim-textobj-entire
+
+[bundle/vim-textobj-line]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- vim-textobj-line
+
+[bundle/vim-textobj-indent]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- vim-textobj-indent
+
+[bundle/vim-expand-region]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- vim-expand-region
