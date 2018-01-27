@@ -39,3 +39,8 @@ setup =
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- ale
+
+[bundle/vim-gutentags]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- vim-gutentags
