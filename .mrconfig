@@ -12,11 +12,17 @@ setup =
 	   mkdir -p autoload
 	   git submodule update --init --recursive -- setup/vim-pathogen
 	   cp setup/vim-pathogen/autoload/pathogen.vim autoload
+add =
+	  cd ..
+	  git add vim-pathogen
 
 [bundle/vim-commentary]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- vim-commentary
+add =
+	  cd ..
+	  git add vim-commentary
 
 [bundle/LanguageClient-neovim]
 setup =
@@ -24,178 +30,286 @@ setup =
 	   git submodule update --init --recursive -- LanguageClient-neovim
 	   cd LanguageClient-neovim
 	   ./install.sh
+add =
+	  cd ..
+	  git add LanguageClient-neovim
 
 [bundle/nvim-completion-manager]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- nvim-completion-manager
+add =
+	  cd ..
+	  git add nvim-completion-manager
 
 [bundle/neomake]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- neomake
+add =
+	   cd ..
+	   git add neomake
 
 [bundle/ale]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- ale
+add =
+	   cd ..
+	   git add ale
 
 [bundle/vim-gutentags]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- vim-gutentags
+add =
+	   cd ..
+	   git add vim-gutentags
 
 [bundle/tagbar]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- tagbar
+add =
+	   cd ..
+	   git add tagbar
 
 [bundle/ultisnips]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- ultisnips
+add =
+	   cd ..
+	   git add ultisnips
 
 [bundle/vim-template]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- vim-template
+add =
+	   cd ..
+	   git add vim-template
 
 [bundle/denite.nvim]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- denite.nvim
+add =
+	   cd ..
+	   git add denite.nvim
 
 [bundle/vim-better-whitespace]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- vim-better-whitespace
+add =
+	   cd ..
+	   git add vim-better-whitespace
 
 [bundle/braceless.vim]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- braceless.vim
+add =
+	   cd ..
+	   git add braceless.vim
 
 [bundle/vim-isort]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- vim-isort
+add =
+	   cd ..
+	   git add vim-isort
 
 [bundle/rust.vim]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- rust.vim
+add =
+	   cd ..
+	   git add rust.vim
 
 [bundle/scratch.vim]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- scratch.vim
+add =
+	   cd ..
+	   git add scratch.vim
 
 [bundle/undotree]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- undotree
+add =
+	   cd ..
+	   git add undotree
 
 [bundle/vim-airline]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- vim-airline
+add =
+	   cd ..
+	   git add vim-airline
 
 [bundle/far.vim]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- far.vim
+add =
+	   cd ..
+	   git add far.vim
 
 [bundle/emmet-vim]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- emmet-vim
+add =
+	   cd ..
+	   git add emmet-vim
 
 [bundle/vim-projectionist]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- vim-projectionist
+add =
+	   cd ..
+	   git add vim-projectionist
 
 [bundle/vim-textobj-user]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- vim-textobj-user
+add =
+	   cd ..
+	   git add vim-textobj-user
 
 [bundle/vim-textobj-entire]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- vim-textobj-entire
+add =
+	   cd ..
+	   git add vim-textobj-entire
 
 [bundle/vim-textobj-line]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- vim-textobj-line
+add =
+	   cd ..
+	   git add vim-textobj-line
 
 [bundle/vim-textobj-indent]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- vim-textobj-indent
+add =
+	   cd ..
+	   git add vim-textobj-indent
 
 [bundle/vim-expand-region]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- vim-expand-region
+add =
+	   cd ..
+	   git add vim-expand-region
 
 [bundle/vim-sneak]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- vim-sneak
+add =
+	   cd ..
+	   git add vim-sneak
 
 [bundle/vim-snippets]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- vim-snippets
+add =
+	   cd ..
+	   git add vim-snippets
 
 [bundle/vim-fugitive]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- vim-fugitive
+add =
+	   cd ..
+	   git add vim-fugitive
 
 [bundle/vim-surround]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- vim-surround
+add =
+	   cd ..
+	   git add vim-surround
 
 [bundle/vim-colorschemes]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- vim-colorschemes
+add =
+	   cd ..
+	   git add vim-colorschemes
 
 [bundle/oceanic-next]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- oceanic-next
+add =
+	   cd ..
+	   git add oceanic-next
 
 [bundle/termschool-vim-theme]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- termschool-vim-theme
+add =
+	   cd ..
+	   git add termschool-vim-theme
 
 [bundle/tmuxline.vim]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- tmuxline.vim
+add =
+	   cd ..
+	   git add tmuxline.vim
 
 [bundle/vim-evanesco]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- vim-evanesco
+add =
+	   cd ..
+	   git add vim-evanesco
 
 [bundle/vim-polyglot]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- vim-polyglot
+add =
+	   cd ..
+	   git add vim-polyglot
 
 [bundle/vim-vinegar]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- vim-vinegar
+add =
+	   cd ..
+	   git add vim-vinegar
 
 [bundle/neoterm]
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- neoterm
+add =
+	   cd ..
+	   git add neoterm
