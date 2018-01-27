@@ -95,3 +95,6 @@
 [submodule "bundle/oceanic-next"]
 	path = bundle/oceanic-next
 	url = https://github.com/mhartington/oceanic-next
+[submodule "bundle/termschool-vim-theme"]
+	path = bundle/termschool-vim-theme
+	url = https://github.com/marcopaganini/termschool-vim-theme

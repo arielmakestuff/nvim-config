@@ -169,3 +169,8 @@ setup =
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- oceanic-next
+
+[bundle/termschool-vim-theme]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- termschool-vim-theme
