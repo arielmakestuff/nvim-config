@@ -7,3 +7,6 @@
 [submodule "bundle/LanguageClient-neovim"]
 	path = bundle/LanguageClient-neovim
 	url = https://github.com/autozimu/LanguageClient-neovim
+[submodule "bundle/nvim-completion-manager"]
+	path = bundle/nvim-completion-manager
+	url = https://github.com/roxma/nvim-completion-manager

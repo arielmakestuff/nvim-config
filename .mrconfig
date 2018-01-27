@@ -24,3 +24,8 @@ setup =
 	   git submodule update --init --recursive -- LanguageClient-neovim
 	   cd LanguageClient-neovim
 	   ./install.sh
+
+[bundle/nvim-completion-manager]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- nvim-completion-manager
