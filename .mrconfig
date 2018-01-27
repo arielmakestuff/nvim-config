@@ -59,3 +59,8 @@ setup =
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- vim-template
+
+[bundle/denite.nvim]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- denite.nvim
