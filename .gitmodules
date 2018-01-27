@@ -80,3 +80,6 @@
 [submodule "bundle/vim-sneak"]
 	path = bundle/vim-sneak
 	url = https://github.com/justinmk/vim-sneak
+[submodule "bundle/vim-snippets"]
+	path = bundle/vim-snippets
+	url = https://github.com/honza/vim-snippets

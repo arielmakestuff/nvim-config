@@ -144,3 +144,8 @@ setup =
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- vim-sneak
+
+[bundle/vim-snippets]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- vim-snippets
