@@ -1,12 +1,25 @@
 [DEFAULT]
 submodule = git submodule update --init --recursive
 git_gc = git gc "$@"
+recent =
+	   git fetch
+	   git log origin
 
 [setup/vim-pathogen]
 setup =
 	   cd ../..
 	   mkdir -p autoload
-	   git submodule update --init --recursive
+	   git submodule update --init --recursive -- setup/vim-pathogen
 	   cp setup/vim-pathogen/autoload/pathogen.vim autoload
 
 [bundle/vim-commentary]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- vim-commentary
+
+[bundle/LanguageClient-neovim]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- LanguageClient-neovim
+	   cd LanguageClient-neovim
+	   ./install.sh
