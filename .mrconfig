@@ -154,3 +154,8 @@ setup =
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- vim-fugitive
+
+[bundle/vim-surround]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- vim-surround
