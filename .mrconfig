@@ -64,3 +64,8 @@ setup =
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- denite.nvim
+
+[bundle/vim-better-whitespace]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- vim-better-whitespace
