@@ -99,3 +99,8 @@ setup =
 setup =
 	   cd ..
 	   git submodule update --init --recursive -- vim-airline
+
+[bundle/far.vim]
+setup =
+	   cd ..
+	   git submodule update --init --recursive -- far.vim
