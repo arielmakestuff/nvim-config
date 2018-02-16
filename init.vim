@@ -438,7 +438,7 @@ let g:rustup_toolchain = 'nightly'
 " --------------------
 let g:lsp_javascript_cmd = ['javascript-typescript-stdio']
 if g:has_windows
-    g:lsp_javascript_cmd[0] = g:lsp_javascript_cmd[0] . '.cmd'
+    let g:lsp_javascript_cmd[0] = g:lsp_javascript_cmd[0] . '.cmd'
     let g:lsp_javascript_cmd = ['cmd', '/C'] + g:lsp_javascript_cmd
 endif
 
