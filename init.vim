@@ -101,9 +101,26 @@ nmap <Leader>x <Plug>CommentaryLine
 
 
 " --------------------
-" nvim-completion-manager
+" deoplete
 " --------------------
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_smart_case = 1
 
+" " disable autocomplete by default
+" let b:deoplete_disable_auto_complete=1
+" let g:deoplete_disable_auto_complete=1
+" call deoplete#custom#buffer_option('auto_complete', v:false)
+
+if !exists('g:deoplete#omni#input_patterns')
+    let g:deoplete#omni#input_patterns = {}
+endif
+
+" set sources
+let g:deoplete#sources = {}
+let g:deoplete#sources.python = ['LanguageClient']
+let g:deoplete#sources.python3 = ['LanguageClient']
+let g:deoplete#sources.rust = ['LanguageClient']
+let g:deoplete#sources.vim = ['vim']
 
 " --------------------
 " neomake
@@ -318,6 +335,7 @@ let g:neoterm_size = '10'
 " ============================================================================
 
 execute pathogen#infect()
+Helptags
 
 
 " ============================================================================
@@ -408,6 +426,15 @@ set completefunc=LanguageClient#complete
 
 " call LanguageClient_setLoggingLevel('DEBUG')
 " let g:LanguageClient_loggingLevel = 'DEBUG'
+
+" --------------------
+" deoplete
+" --------------------
+" Disable the candidates in Comment/String syntaxes.
+call deoplete#custom#source('_',
+            \ 'disabled_syntaxes', ['Comment', 'String'])
+
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
 " --------------------
 " Denite
