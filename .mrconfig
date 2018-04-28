@@ -34,13 +34,13 @@ add =
 	  cd ..
 	  git add LanguageClient-neovim
 
-[bundle/nvim-completion-manager]
+[bundle/deoplete.nvim]
 setup =
 	   cd ..
-	   git submodule update --init --recursive -- nvim-completion-manager
+	   git submodule update --init --recursive -- deoplete.nvim
 add =
 	  cd ..
-	  git add nvim-completion-manager
+	  git add deoplete.nvim
 
 [bundle/neomake]
 setup =
