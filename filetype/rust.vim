@@ -12,8 +12,15 @@ if executable('rustup')
     let g:rustfmt_command = 'rustup run ' . g:rustup_toolchain . ' rustfmt'
 
     " Enable rustfmt run on save
-    let g:rustfmt_autosave = 1
+    " let g:rustfmt_autosave = 1
 endif
+
+" Configure ALE
+let g:ale_fixers = {
+            \  'rust': ['rustfmt'],
+            \}
+
+let g:ale_fix_on_save = 1
 
 " Check all files including test files
 " let g:neomake_rust_cargo_command = ['test', '--no-run']
