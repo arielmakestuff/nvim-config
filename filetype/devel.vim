@@ -12,6 +12,8 @@ set foldcolumn=0
 
 set nospell
 
+set colorcolumn=80
+
 " ------------------------------
 " Set underline for current line
 " ------------------------------
