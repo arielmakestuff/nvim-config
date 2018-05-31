@@ -5,6 +5,8 @@ recent =
 	   git fetch
 	   git log origin
 log = git log --oneline --decorate --all --graph
+update = git pull && mr add
+changes = git log HEAD..origin/$(git rev-parse --abbrev-ref HEAD)
 
 [setup/vim-pathogen]
 setup =
