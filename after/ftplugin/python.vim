@@ -1,5 +1,5 @@
 " General devel settings
-source $XDG_CONFIG_HOME/nvim/filetype/devel.vim
+source $XDG_CONFIG_HOME/nvim/init/ftplugin/devel.vim
 
 
 " =====================================================
@@ -43,6 +43,23 @@ let g:neomake_python_enabled_makers = ['flake8', 'pylint', 'pylama']
 " Run test
 nnoremap <Leader>t :call neoterm#test#run('current')<CR>
 
+" setlocal omnifunc=python3complete#Complete
+let g:python_highlight_numbers=1
+let g:python_highlight_exceptions=1
+let g:python_highlight_space_errors=1
+
+" " delimitMate options
+" let g:delimitMate_autoclose=1 |
+"     \ let b:delimitMate_nesting_quotes = ["\"","'"]
+
+" braceless
+BracelessEnable
+
+" Isort
+" autocmd BufWritePre *.py Isort
+
+" Neomake
+" autocmd BufWritePost *.py Neomake
 
 " =====================================================
 "

@@ -637,33 +637,6 @@ augroup END
 
 
 " --------------------
-" Python
-" --------------------
-augroup filetype_python
-    autocmd!
-    autocmd BufRead,BufNewFile *.py
-        \ source $XDG_CONFIG_HOME/nvim/filetype/python.vim
-    " autocmd FileType python set omnifunc=python3complete#Complete
-    autocmd FileType python let g:python_highlight_numbers=1
-    autocmd FileType python let g:python_highlight_exceptions=1
-    autocmd FileType python let g:python_highlight_space_errors=1
-
-    " " delimitMate options
-    " autocmd FileType python let g:delimitMate_autoclose=1 |
-    "     \ let b:delimitMate_nesting_quotes = ["\"","'"]
-
-    " braceless
-    autocmd FileType python BracelessEnable
-
-    " Isort
-    " autocmd BufWritePre *.py Isort
-
-    " Neomake
-    " autocmd BufWritePost *.py Neomake
-augroup END
-
-
-" --------------------
 " VimScript
 " --------------------
 augroup filetype_vim
