@@ -637,20 +637,6 @@ augroup END
 
 
 " --------------------
-" VimScript
-" --------------------
-augroup filetype_vim
-    autocmd!
-    autocmd BufRead,BufNewFile *.vim
-        \ source $XDG_CONFIG_HOME/nvim/filetype/vim.vim
-
-    " " delimitMate
-    " autocmd FileType vim let g:delimitMate_autoclose=1
-
-    " autocmd BufWritePost *.vim Neomake
-augroup END
-
-" --------------------
 " HTML/CSS
 " --------------------
 augroup filetype_html
