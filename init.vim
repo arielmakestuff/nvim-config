@@ -117,10 +117,11 @@ endif
 
 " set sources
 let g:deoplete#sources = {}
-let g:deoplete#sources.python = ['LanguageClient']
-let g:deoplete#sources.python3 = ['LanguageClient']
-let g:deoplete#sources.rust = ['LanguageClient']
-let g:deoplete#sources.vim = ['vim']
+let g:deoplete#sources.python = ['LanguageClient', 'file']
+let g:deoplete#sources.python3 = ['LanguageClient', 'file']
+let g:deoplete#sources.rust = ['LanguageClient', 'file']
+let g:deoplete#sources['javascript.jsx'] = ['LanguageClient', 'file']
+let g:deoplete#sources.vim = ['vim', 'file']
 
 " --------------------
 " neomake
