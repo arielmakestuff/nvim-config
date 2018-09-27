@@ -1,18 +1,18 @@
-set nobackup
-set tabstop=4
-set shiftwidth=4
-set expandtab
-set smarttab
-set autoindent
+setlocal nobackup
+setlocal tabstop=4
+setlocal shiftwidth=4
+setlocal expandtab
+setlocal smarttab
+setlocal autoindent
 
-set nowrap
-set textwidth=80
-set wrapmargin=0
-set foldcolumn=0
+setlocal nowrap
+setlocal textwidth=80
+setlocal wrapmargin=0
+setlocal foldcolumn=0
 
-set nospell
+setlocal nospell
 
-set colorcolumn=80
+setlocal colorcolumn=80
 
 " ------------------------------
 " Set underline for current line
@@ -21,5 +21,5 @@ set colorcolumn=80
 if !g:has_windows
     hi clear CursorLine
     hi CursorLine gui=underline cterm=underline ctermfg=None guifg=None
-    set cursorline
+    setlocal cursorline
 endif
