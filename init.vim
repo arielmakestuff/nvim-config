@@ -637,15 +637,6 @@ augroup END
 
 
 " --------------------
-" Javascript
-" --------------------
-augroup filetype_js_jsx
-    autocmd!
-    autocmd FileType javascript,javascript.jsx
-                \ source $XDG_CONFIG_HOME/nvim/filetype/javascript_jsx.vim
-augroup END
-
-" --------------------
 " Misc
 " --------------------
 augroup filetype_all
