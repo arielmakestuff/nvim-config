@@ -664,35 +664,6 @@ augroup END
 
 
 " --------------------
-" Rust
-" --------------------
-augroup filetype_rust
-    autocmd!
-    autocmd BufRead,BufNewFile *.rs
-        \ source $XDG_CONFIG_HOME/nvim/filetype/rust.vim
-
-    " --------------------
-    " ALE
-    " --------------------
-    " let g:ale_linters = {'rust': ['rls']}
-
-    " Neomake
-    " autocmd BufWritePost *.rs Neomake
-
-    " RustFmt
-    " autocmd BufWritePost *.rs RustFmt
-
-    " Rusty tags
-    " if !has('win32') && !has('win64')
-    "     autocmd BufWrite *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" .
-    "                 \ expand('%:p:h') . "&"
-    " endif
-
-    " autocmd FileType rust let g:neomake_open_list = 2
-augroup END
-
-
-" --------------------
 " VimScript
 " --------------------
 augroup filetype_vim
