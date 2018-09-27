@@ -637,16 +637,6 @@ augroup END
 
 
 " --------------------
-" HTML/CSS
-" --------------------
-augroup filetype_html
-    autocmd!
-    autocmd FileType html,css
-                \ source $XDG_CONFIG_HOME/nvim/filetype/html.vim |
-                \ EmmetInstall
-augroup END
-
-" --------------------
 " Javascript
 " --------------------
 augroup filetype_js_jsx
