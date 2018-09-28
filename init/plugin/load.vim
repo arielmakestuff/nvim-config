@@ -33,43 +33,58 @@ Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': g:lsp_install_cm
 " --------------------
 " deoplete
 " --------------------
-" function! DoRemote(arg)
-"     UpdateRemotePlugins
-" endfunction
-" Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
-" let g:deoplete#enable_at_startup = 1
-" let g:deoplete#enable_smart_case = 1
+if g:has_windows
+    function! DoRemote(arg)
+        UpdateRemotePlugins
+    endfunction
+    Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+    let g:deoplete#enable_at_startup = 1
+    let g:deoplete#enable_smart_case = 1
+
+    if !exists('g:deoplete#omni#input_patterns')
+        let g:deoplete#omni#input_patterns = {}
+    endif
+
+    " set sources
+    let g:deoplete#sources = {}
+    let g:deoplete#sources.python = ['LanguageClient']
+    let g:deoplete#sources.python3 = ['LanguageClient']
+    let g:deoplete#sources.rust = ['LanguageClient']
+    let g:deoplete#sources['javascript.jsx'] = ['LanguageClient', 'file']
+    let g:deoplete#sources.rst = []
+    let g:deoplete#sources.vim = ['vim']
+endif
 
 " --------------------
 " ncm2
 " --------------------
-Plug 'ncm2/ncm2'
-Plug 'roxma/nvim-yarp'
-
-" enable ncm2 for all buffers
-autocmd BufEnter * call ncm2#enable_for_buffer()
-
-" IMPORTANT: :help Ncm2PopupOpen for more information
-set completeopt=noinsert,menuone,noselect
-set shortmess+=c
-
-" NOTE: you need to install completion sources to get completions. Check our
-" wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
 if !g:has_windows
-    Plug 'ncm2/ncm2-tmux'
-endif
+    Plug 'ncm2/ncm2'
+    Plug 'roxma/nvim-yarp'
 
-Plug 'ncm2/ncm2-bufword'
-Plug 'ncm2/ncm2-path'
-Plug 'ncm2/ncm2-html-subscope'
-Plug 'ncm2/ncm2-markdown-subscope'
-Plug 'ncm2/ncm2-rst-subscope'
-Plug 'ncm2/ncm2-ultisnips'
-Plug 'ncm2/ncm2-match-highlight'
-Plug 'ncm2/ncm2-jedi'
-Plug 'ncm2/ncm2-tern'
-Plug 'ncm2/ncm2-cssomni'
-Plug 'ncm2/ncm2-vim'
+    " enable ncm2 for all buffers
+    autocmd BufEnter * call ncm2#enable_for_buffer()
+
+    " IMPORTANT: :help Ncm2PopupOpen for more information
+    set completeopt=noinsert,menuone,noselect
+    set shortmess+=c
+
+    " NOTE: you need to install completion sources to get completions. Check our
+    " wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
+    Plug 'ncm2/ncm2-tmux'
+
+    Plug 'ncm2/ncm2-bufword'
+    Plug 'ncm2/ncm2-path'
+    Plug 'ncm2/ncm2-html-subscope'
+    Plug 'ncm2/ncm2-markdown-subscope'
+    Plug 'ncm2/ncm2-rst-subscope'
+    Plug 'ncm2/ncm2-ultisnips'
+    Plug 'ncm2/ncm2-match-highlight'
+    Plug 'ncm2/ncm2-jedi'
+    Plug 'ncm2/ncm2-tern'
+    Plug 'ncm2/ncm2-cssomni'
+    Plug 'ncm2/ncm2-vim'
+endif
 
 " --------------------
 " markdown

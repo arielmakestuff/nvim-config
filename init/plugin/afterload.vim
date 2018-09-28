@@ -91,6 +91,17 @@ set completefunc=LanguageClient#complete
 " let g:LanguageClient_loggingLevel = 'DEBUG'
 
 " --------------------
+" deoplete
+" --------------------
+" Disable the candidates in Comment/String syntaxes.
+if g:has_windows
+    call deoplete#custom#source('_',
+                \ 'disabled_syntaxes', ['Comment', 'String'])
+
+    autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+endif
+
+" --------------------
 " Denite
 " --------------------
 if executable('ag')
