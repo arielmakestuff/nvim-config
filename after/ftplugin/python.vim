@@ -1,5 +1,5 @@
 " General devel settings
-source $XDG_CONFIG_HOME/nvim/init/ftplugin/devel.vim
+exec 'source ' . g:ftplugin_shared_devel
 
 
 " =====================================================

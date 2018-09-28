@@ -1,1 +1,1 @@
-source $XDG_CONFIG_HOME/nvim/shared/ftplugin/javascript_jsx.vim
+exec 'source ' . g:nvim_config_home . '/shared/ftplugin/javascript_jsx.vim'

@@ -1,2 +1,1 @@
-" General devel settings
-source $XDG_CONFIG_HOME/nvim/shared/ftplugin/htmlcss.vim
+exec 'source ' . g:nvim_config_home . '/shared/ftplugin/htmlcss.vim'
