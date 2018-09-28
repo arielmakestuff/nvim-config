@@ -34,7 +34,7 @@ let $VIRTUAL_ENV=''
 
 
 if g:has_windows
-    let g:python3_hostdir = g:nvim_data_home . '/pyvenv36'
+    let g:python3_hostdir = g:nvim_data_home . '/pyvenv3'
     let g:python3_host_prog = g:python3_hostdir . '/Scripts/python.exe'
     " let g:python36_hostdir = g:vim_data_home . '/pyvenv36'
     " let g:python36_host_prog = g:python36_hostdir . '/Scripts/python.exe'
