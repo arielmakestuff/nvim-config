@@ -329,6 +329,15 @@ Plug 'terryma/vim-expand-region'
 Plug 'justinmk/vim-sneak'
 
 " --------------------
+" vim-table-mode
+" --------------------
+Plug 'dhruvasagar/vim-table-mode'
+" To enable table-mode, use the following keybinding:
+"     <Leader>tm
+let g:table_mode_corner_corner = '+'
+let g:table_mode_header_fillchar = '='
+
+" --------------------
 " Others
 " --------------------
 Plug 'honza/vim-snippets'
