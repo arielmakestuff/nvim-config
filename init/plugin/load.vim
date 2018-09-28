@@ -57,6 +57,10 @@ set completeopt=noinsert,menuone,noselect
 Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-tmux'
 Plug 'ncm2/ncm2-path'
+Plug 'ncm2/ncm2-html-subscope'
+Plug 'ncm2/ncm2-markdown-subscope'
+Plug 'ncm2/ncm2-rst-subscope'
+Plug 'ncm2/ncm2-ultisnips'
 
 " --------------------
 " deoplete-jedi
