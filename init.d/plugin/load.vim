@@ -52,6 +52,7 @@ autocmd BufEnter * call ncm2#enable_for_buffer()
 
 " IMPORTANT: :help Ncm2PopupOpen for more information
 set completeopt=noinsert,menuone,noselect
+set shortmess+=c
 
 " NOTE: you need to install completion sources to get completions. Check our
 " wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
@@ -62,6 +63,16 @@ Plug 'ncm2/ncm2-html-subscope'
 Plug 'ncm2/ncm2-markdown-subscope'
 Plug 'ncm2/ncm2-rst-subscope'
 Plug 'ncm2/ncm2-ultisnips'
+Plug 'ncm2/ncm2-match-highlight'
+Plug 'ncm2/ncm2-jedi'
+Plug 'ncm2/ncm2-tern'
+Plug 'ncm2/ncm2-cssomni'
+Plug 'ncm2/ncm2-vim'
+
+" --------------------
+" markdown
+" --------------------
+Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
 
 " --------------------
 " deoplete-jedi
