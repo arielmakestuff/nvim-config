@@ -199,6 +199,12 @@ endfunction
 " vnoremap <F3> <Esc>:CtrlSpace O<CR>
 
 " --------------------
+" vim-rooter
+" --------------------
+Plug 'airblade/vim-rooter'
+let g:rooter_manual_only = 1
+
+" --------------------
 " Denite
 " --------------------
 Plug 'Shougo/denite.nvim'
@@ -215,11 +221,17 @@ else
     vnoremap <Leader>` <Esc>:Denite -mode=normal -cursor-wrap=true outline<CR>
 endif
 
+nnoremap <Leader>f :Denite -cursor-wrap=true file/rec
 
 " " Fuzzy file search
 " " nnoremap <F3> :Denite -direction=botright file_rec<CR>
 " " vnoremap <F3> <Esc>:Denite -direction=botright file_rec<CR>
 
+" --------------------
+" fruzzy
+" --------------------
+Plug 'raghur/fruzzy', { 'do': { -> fruzzy#install() } }
+let g:fruzzy#usenative = 1
 
 
 " " --------------------
