@@ -207,14 +207,15 @@ let g:rooter_manual_only = 1
 " Denite
 " --------------------
 Plug 'Shougo/denite.nvim'
+nnoremap <C-Space> :Denite -mode=normal -cursor-wrap=true buffer<CR>
+vnoremap <C-Space> <Esc>:Denite -mode=normal -cursor-wrap=true buffer<CR>
 if g:has_windows
-    nnoremap <C-Space> :Denite -mode=normal -cursor-wrap=true buffer
-    vnoremap <C-Space> <Esc>:Denite -mode=normal -cursor-wrap=true buffer
-    nnoremap <Leader>` :Denite -mode=normal -cursor-wrap=true outline
-    vnoremap <Leader>` <Esc>:Denite -mode=normal -cursor-wrap=true outline
+    let s:denite_outline_cmd = '<Leader>` :Denite '
+                \ . '-mode=normal -cursor-wrap=true outline'
+    exec 'nnoremap ' . s:denite_outline_cmd . g:vim_cr_char
+    exec 'vnoremap ' . s:denite_outline_cmd . g:vim_cr_char
+    unlet s:denite_outline_cmd
 else
-    nnoremap <C-Space> :Denite -mode=normal -cursor-wrap=true buffer<CR>
-    vnoremap <C-Space> <Esc>:Denite -mode=normal -cursor-wrap=true buffer<CR>
     nnoremap <Leader>` :Denite -mode=normal -cursor-wrap=true outline<CR>
     vnoremap <Leader>` <Esc>:Denite -mode=normal -cursor-wrap=true outline<CR>
 endif
