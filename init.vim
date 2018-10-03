@@ -11,6 +11,11 @@ let g:has_windows = has('win32') || has('win64')
 " set guicursor=n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20
 set guicursor=
 
+if g:has_windows
+    let g:vim_cr_char = ''
+else
+    let g:vim_cr_char = '<CR>'
+endif
 
 " ============================================================================
 " Source init runparts
