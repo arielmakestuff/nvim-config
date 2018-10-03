@@ -104,13 +104,22 @@ endif
 " --------------------
 " Denite
 " --------------------
-if executable('ag')
-    call denite#custom#var('file_rec', 'command',
+if executable('rg')
+    let s:ignore = &wildignore
+    let s:ignore = substitute(s:ignore, ',', ',!', 'g')
+    let s:ignore = '!' . s:ignore
+    call denite#custom#var('file/rec', 'command',
+                \ ['rg', '--follow', '--color', 'never', '--no-heading', '-l'
+                \  , '-g', s:ignore, ''])
+    unlet s:ignore
+elseif executable('ag')
+    call denite#custom#var('file/rec', 'command',
                 \ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
 endif
 
+
 " Further denite configuration is in after/plugin/rooter.vim in order to set the
-" g:rooter_root_dir variable
+" rooter_root_dir variable
 let g:denite_filerec_cmd = ':Denite -cursor-wrap=true file/rec'
 let g:denite_filerec_bind = '<Leader>f'
 
