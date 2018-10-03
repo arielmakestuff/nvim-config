@@ -17,12 +17,7 @@ if s:rooter_root_dir != ''
                 \ . s:rooter_root_dir
 endif
 
-if g:has_windows
-    let s:carriage_return = ''
-else
-    let s:carriage_return = '<CR>'
-endif
 let s:denite_filerec_exec = s:denite_filerec_exec
-            \ . s:carriage_return
+            \ . g:vim_cr_char
 
 exec s:denite_filerec_exec
