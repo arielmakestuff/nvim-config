@@ -13,6 +13,7 @@ setlocal foldcolumn=0
 setlocal nospell
 
 setlocal colorcolumn=80
+setlocal wildignore=.git/
 
 " ------------------------------
 " Set underline for current line

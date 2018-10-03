@@ -1,6 +1,8 @@
 " General devel settings
 exec 'source ' . g:ftplugin_shared_devel
 
+setlocal wildignore+=__pycache__/
+
 
 " =====================================================
 " Python settings
