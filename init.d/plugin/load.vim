@@ -208,20 +208,19 @@ let g:rooter_manual_only = 1
 " Denite
 " --------------------
 Plug 'Shougo/denite.nvim'
-" C-@ is Control-Space
 if g:has_windows
-    nnoremap <C-Space> :Denite -mode=normal -cursor-wrap=true buffer<CR>
-    vnoremap <C-Space> <Esc>:Denite -mode=normal -cursor-wrap=true buffer<CR>
+    nnoremap <C-Space> :Denite -mode=normal -cursor-wrap=true buffer
+    vnoremap <C-Space> <Esc>:Denite -mode=normal -cursor-wrap=true buffer
+    nnoremap <Leader>` :Denite -mode=normal -cursor-wrap=true outline
+    vnoremap <Leader>` <Esc>:Denite -mode=normal -cursor-wrap=true outline
 else
     nnoremap <C-Space> :Denite -mode=normal -cursor-wrap=true buffer<CR>
     vnoremap <C-Space> <Esc>:Denite -mode=normal -cursor-wrap=true buffer<CR>
-    " nnoremap <C-@> :Denite -mode=normal -cursor-wrap=true buffer<CR>
-    " vnoremap <C-@> <Esc>:Denite -mode=normal -cursor-wrap=true buffer<CR>
     nnoremap <Leader>` :Denite -mode=normal -cursor-wrap=true outline<CR>
     vnoremap <Leader>` <Esc>:Denite -mode=normal -cursor-wrap=true outline<CR>
 endif
 
-nnoremap <Leader>f :Denite -cursor-wrap=true file/rec
+set wildignore=.git/
 
 " " Fuzzy file search
 " " nnoremap <F3> :Denite -direction=botright file_rec<CR>
