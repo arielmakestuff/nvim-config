@@ -109,6 +109,16 @@ if executable('ag')
                 \ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
 endif
 
+" Further denite configuration is in after/plugin/rooter.vim in order to set the
+" g:rooter_root_dir variable
+let g:denite_filerec_cmd = ':Denite -cursor-wrap=true file/rec'
+let g:denite_filerec_bind = '<Leader>f'
+
+" --------------------
+" fruzzy
+" --------------------
+call denite#custom#source('_', 'matchers', ['matcher/fruzzy'])
+
 
 " --------------------
 " Far
