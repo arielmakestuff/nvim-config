@@ -114,6 +114,10 @@ endif
 let g:denite_filerec_cmd = ':Denite -cursor-wrap=true file/rec'
 let g:denite_filerec_bind = '<Leader>f'
 
+exec 'nnoremap <Leader>F '
+            \ . g:denite_filerec_cmd
+            \ . '<CR>'
+
 " --------------------
 " fruzzy
 " --------------------
