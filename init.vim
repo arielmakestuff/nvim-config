@@ -110,7 +110,7 @@ set wrapmargin=2
 set background=dark
 set foldcolumn=0
 set wildmenu
-set wildmode=list:full
+set wildmode=list:longest,full
 set laststatus=2
 set ttimeoutlen=0
 set clipboard=unnamed
