@@ -62,7 +62,7 @@ if g:has_windows
     let &shell='cmd.exe'
 
     " Leader c for commandline, Leader e to exit
-    nmap <Leader>c :term<CR>acmd.exe /c "C:\\msys64\\usr\\bin\\bash.exe --login -i"<CR>
+    nmap <Leader>c :term bash --login -i<CR>
     exec 'tnoremap <Leader>e exit<CR>exit'
                 \ . g:vim_cr_char
     let $PATH= g:python3_hostdir . '/Scripts;' . $PATH
