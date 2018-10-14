@@ -70,6 +70,11 @@ elseif &shell =~# 'fish$'
     set shell=/bin/zsh
 endif
 
+if !g:has_windows
+    " Leader c for commandline
+    nmap <Leader>c :term<CR>
+endif
+
 " ============================================================================
 " Plugins
 " ============================================================================
