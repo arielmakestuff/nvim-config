@@ -242,6 +242,12 @@ nnoremap <F10> :call RelNumberToggle()<CR>
 nnoremap <M-l> :bn<CR>
 nnoremap <M-h> :bp<CR>
 
+" Key bindings for tabs
+nnoremap <C-M-l> :tabnext<CR>
+nnoremap <C-M-h> :tabprevious<CR>
+nnoremap <C-M-t> :tabnew<CR>
+nnoremap <Leader>W :tabclose<CR>
+
 " Wipe buffer
 " nmap <Leader>w :bwipeout<CR>
 
@@ -254,9 +260,8 @@ nnoremap <Leader>h :set invlist<cr>
 " Clear hlsearch
 nnoremap <Leader>/ :noh<CR>
 
-" List buffers
-nnoremap <Leader>l :ls<CR>
-nnoremap <Leader><S-l> :ls!<CR>
+" List tabs
+nnoremap <Leader>l :tabs<CR>
 
 " Spell check
 nnoremap <Leader>s :set spell<CR>
