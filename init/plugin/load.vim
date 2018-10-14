@@ -62,6 +62,9 @@ if !g:has_windows
     Plug 'ncm2/ncm2'
     Plug 'roxma/nvim-yarp'
 
+    " This is needed by nvim-yarp
+    Plug 'Shougo/neco-vim'
+
     " enable ncm2 for all buffers
     autocmd BufEnter * call ncm2#enable_for_buffer()
 
