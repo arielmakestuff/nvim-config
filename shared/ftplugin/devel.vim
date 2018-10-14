@@ -14,6 +14,7 @@ setlocal nospell
 
 setlocal colorcolumn=80
 setlocal wildignore=.git/
+setlocal updatetime=100
 
 " ------------------------------
 " Set underline for current line
