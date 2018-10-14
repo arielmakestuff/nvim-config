@@ -240,7 +240,7 @@ let g:fruzzy#usenative = 1
 " " --------------------
 " " vim-grepper
 " " --------------------
-" Plug 'mhinz/vim-grepper'
+Plug 'mhinz/vim-grepper'
 
 
 " --------------------
@@ -329,7 +329,7 @@ let g:airline_theme='minimalist'
 " Far
 " --------------------
 "  This is a multi file search and replace plugin
-Plug 'brooth/far.vim', {'do': ':UpdateRemotePlugins'}
+" Plug 'brooth/far.vim', {'do': ':UpdateRemotePlugins'}
 
 " --------------------
 " Emmet
@@ -369,6 +369,11 @@ Plug 'dhruvasagar/vim-table-mode'
 "     <Leader>tm
 let g:table_mode_corner_corner = '+'
 let g:table_mode_header_fillchar = '='
+
+" --------------------
+" vim-gitgutter
+" --------------------
+Plug 'airblade/vim-gitgutter'
 
 " --------------------
 " Others
