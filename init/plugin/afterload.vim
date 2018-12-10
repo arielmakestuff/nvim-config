@@ -59,47 +59,47 @@ let g:rustup_toolchain = 'nightly'
 " --------------------
 " Javascript vars
 " --------------------
-let g:lsp_javascript_cmd = ['javascript-typescript-stdio']
-if g:has_windows
-    let g:lsp_javascript_cmd[0] = g:lsp_javascript_cmd[0] . '.cmd'
-    let g:lsp_javascript_cmd = ['cmd', '/C'] + g:lsp_javascript_cmd
-endif
+" let g:lsp_javascript_cmd = ['javascript-typescript-stdio']
+" if g:has_windows
+"     let g:lsp_javascript_cmd[0] = g:lsp_javascript_cmd[0] . '.cmd'
+"     let g:lsp_javascript_cmd = ['cmd', '/C'] + g:lsp_javascript_cmd
+" endif
 
 " --------------------
 " LanguageClient
 " --------------------
-let g:LanguageClient_serverCommands = {
-    \ 'rust': ['rustup', 'run', g:rustup_toolchain, 'rls'],
-    \ 'python': ['pyls'],
-    \ 'javascript': g:lsp_javascript_cmd,
-    \ 'javascript.jsx': g:lsp_javascript_cmd,
-    \ }
-let g:LanguageClient_autoStart = 1
-let g:LanguageClient_hasSnippetSupport = 0
-" if !has('win32') && !has('win64')
-"     let g:LanguageClient_autoStart = 1
-" endif
+" let g:LanguageClient_serverCommands = {
+"     \ 'rust': ['rustup', 'run', g:rustup_toolchain, 'rls'],
+"     \ 'python': ['pyls'],
+"     \ 'javascript': g:lsp_javascript_cmd,
+"     \ 'javascript.jsx': g:lsp_javascript_cmd,
+"     \ }
+" let g:LanguageClient_hasSnippetSupport = 0
+" let g:LanguageClient_autoStart = 1
+" " if !has('win32') && !has('win64')
+" "     let g:LanguageClient_autoStart = 1
+" " endif
 
-" Bindings
-nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
-nnoremap <Leader>r :call LanguageClient_textDocument_rename()<CR>
+" " Bindings
+" nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
+" nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+" nnoremap <Leader>r :call LanguageClient_textDocument_rename()<CR>
 
-set completefunc=LanguageClient#complete
+" set completefunc=LanguageClient#complete
 
-" call LanguageClient_setLoggingLevel('DEBUG')
-" let g:LanguageClient_loggingLevel = 'DEBUG'
+" " call LanguageClient_setLoggingLevel('DEBUG')
+" " let g:LanguageClient_loggingLevel = 'DEBUG'
 
 " --------------------
 " deoplete
 " --------------------
-" Disable the candidates in Comment/String syntaxes.
-if g:has_windows
-    call deoplete#custom#source('_',
-                \ 'disabled_syntaxes', ['Comment', 'String'])
+" " Disable the candidates in Comment/String syntaxes.
+" if g:has_windows
+"     call deoplete#custom#source('_',
+"                 \ 'disabled_syntaxes', ['Comment', 'String'])
 
-    autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
-endif
+"     autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+" endif
 
 " --------------------
 " Denite

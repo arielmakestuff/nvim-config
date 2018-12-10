@@ -21,74 +21,74 @@ nmap <Leader>x <Plug>CommentaryLine
 " --------------------
 " LanguageClient
 " --------------------
-let g:lsp_install_cmd = './install.sh'
-if g:has_windows
-    let g:lsp_install_cmd = 'powershell ./install.ps1'
-endif
+" let g:lsp_install_cmd = './install.sh'
+" if g:has_windows
+"     let g:lsp_install_cmd = 'powershell ./install.ps1'
+" endif
 
-" Plug 'autozimu/LanguageClient-neovim', {'do': ':UpdateRemotePlugins'}
-Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': g:lsp_install_cmd}
+" " Plug 'autozimu/LanguageClient-neovim', {'do': ':UpdateRemotePlugins'}
+" Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': g:lsp_install_cmd}
 
 
 " --------------------
 " deoplete
 " --------------------
-if g:has_windows
-    function! DoRemote(arg)
-        UpdateRemotePlugins
-    endfunction
-    Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
-    let g:deoplete#enable_at_startup = 1
-    let g:deoplete#enable_smart_case = 1
+" if g:has_windows
+"     function! DoRemote(arg)
+"         UpdateRemotePlugins
+"     endfunction
+"     Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+"     let g:deoplete#enable_at_startup = 1
+"     let g:deoplete#enable_smart_case = 1
 
-    if !exists('g:deoplete#omni#input_patterns')
-        let g:deoplete#omni#input_patterns = {}
-    endif
+"     if !exists('g:deoplete#omni#input_patterns')
+"         let g:deoplete#omni#input_patterns = {}
+"     endif
 
-    " set sources
-    let g:deoplete#sources = {}
-    let g:deoplete#sources.python = ['LanguageClient']
-    let g:deoplete#sources.python3 = ['LanguageClient']
-    let g:deoplete#sources.rust = ['LanguageClient']
-    let g:deoplete#sources['javascript.jsx'] = ['LanguageClient', 'file']
-    let g:deoplete#sources.rst = []
-    let g:deoplete#sources.vim = ['vim']
-endif
+"     " set sources
+"     let g:deoplete#sources = {}
+"     let g:deoplete#sources.python = ['LanguageClient']
+"     let g:deoplete#sources.python3 = ['LanguageClient']
+"     let g:deoplete#sources.rust = ['LanguageClient']
+"     let g:deoplete#sources['javascript.jsx'] = ['LanguageClient', 'file']
+"     let g:deoplete#sources.rst = []
+"     let g:deoplete#sources.vim = ['vim']
+" endif
 
 " --------------------
 " ncm2
 " --------------------
-if !g:has_windows
-    Plug 'ncm2/ncm2'
-    Plug 'roxma/nvim-yarp'
+" if !g:has_windows
+"     Plug 'ncm2/ncm2'
+"     Plug 'roxma/nvim-yarp'
 
-    " This is needed by nvim-yarp
-    Plug 'Shougo/neco-vim'
+"     " This is needed by nvim-yarp
+"     Plug 'Shougo/neco-vim'
 
-    " enable ncm2 for all buffers
-    autocmd BufEnter * call ncm2#enable_for_buffer()
+"     " enable ncm2 for all buffers
+"     autocmd BufEnter * call ncm2#enable_for_buffer()
 
-    " IMPORTANT: :help Ncm2PopupOpen for more information
-    set completeopt=noinsert,menuone,noselect
-    set shortmess+=c
+"     " IMPORTANT: :help Ncm2PopupOpen for more information
+"     set completeopt=noinsert,menuone,noselect
+"     set shortmess+=c
 
-    " NOTE: you need to install completion sources to get completions. Check our
-    " wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
-    Plug 'ncm2/ncm2-tmux'
+"     " NOTE: you need to install completion sources to get completions. Check our
+"     " wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
+"     Plug 'ncm2/ncm2-tmux'
 
-    Plug 'ncm2/ncm2-bufword'
-    Plug 'ncm2/ncm2-path'
-    Plug 'arielmakestuff/ncm2-html-subscope', {'branch': 'develop'}
-    Plug 'ncm2/ncm2-markdown-subscope'
-    Plug 'ncm2/ncm2-rst-subscope'
-    Plug 'ncm2/ncm2-ultisnips'
-    Plug 'ncm2/ncm2-match-highlight'
-    Plug 'ncm2/ncm2-jedi'
-    Plug 'ncm2/ncm2-tern', {'do': 'yarn'}
-    Plug 'ncm2/ncm2-cssomni'
-    Plug 'ncm2/ncm2-vim'
-    Plug 'ncm2/ncm2-syntax' | Plug 'Shougo/neco-syntax'
-endif
+"     Plug 'ncm2/ncm2-bufword'
+"     Plug 'ncm2/ncm2-path'
+"     Plug 'arielmakestuff/ncm2-html-subscope', {'branch': 'develop'}
+"     Plug 'ncm2/ncm2-markdown-subscope'
+"     Plug 'ncm2/ncm2-rst-subscope'
+"     Plug 'ncm2/ncm2-ultisnips'
+"     Plug 'ncm2/ncm2-match-highlight'
+"     Plug 'ncm2/ncm2-jedi'
+"     Plug 'ncm2/ncm2-tern', {'do': 'yarn'}
+"     Plug 'ncm2/ncm2-cssomni'
+"     Plug 'ncm2/ncm2-vim'
+"     Plug 'ncm2/ncm2-syntax' | Plug 'Shougo/neco-syntax'
+" endif
 
 " --------------------
 " markdown
