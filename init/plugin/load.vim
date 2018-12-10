@@ -91,6 +91,11 @@ nmap <Leader>x <Plug>CommentaryLine
 " endif
 
 " --------------------
+" coc.nvim
+" --------------------
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+
+" --------------------
 " markdown
 " --------------------
 Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
