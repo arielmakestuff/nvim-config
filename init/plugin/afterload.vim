@@ -75,6 +75,7 @@ let g:LanguageClient_serverCommands = {
     \ 'javascript.jsx': g:lsp_javascript_cmd,
     \ }
 let g:LanguageClient_autoStart = 1
+let g:LanguageClient_hasSnippetSupport = 0
 " if !has('win32') && !has('win64')
 "     let g:LanguageClient_autoStart = 1
 " endif
