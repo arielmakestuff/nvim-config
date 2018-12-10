@@ -102,6 +102,22 @@ let g:rustup_toolchain = 'nightly'
 " endif
 
 " --------------------
+" coc.nvim
+" --------------------
+" Use TAB and S-TAB to navigate completion list
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" Use ENTER to confirm complete
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
+
+" Close preview window when completion done
+autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+
+" Manually trigger autocomplete
+inoremap <silent><expr> <Leader><Space> coc#refresh()
+
+" --------------------
 " Denite
 " --------------------
 if executable('rg')

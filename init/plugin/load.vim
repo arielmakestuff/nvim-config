@@ -93,7 +93,13 @@ nmap <Leader>x <Plug>CommentaryLine
 " --------------------
 " coc.nvim
 " --------------------
+" This is needed by coc-neco
+Plug 'Shougo/neco-vim'
+Plug 'neoclide/coc-neco'
+
+Plug 'neoclide/jsonc.vim'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+
 
 " --------------------
 " markdown
