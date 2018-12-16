@@ -21,7 +21,7 @@ setlocal updatetime=100
 " ------------------------------
 " Disable this only on windows since this doesn't work properly with nvim-qt
 if !g:has_windows
-    hi clear CursorLine
-    hi CursorLine gui=underline cterm=underline ctermfg=None guifg=None
+    " hi clear CursorLine
+    " hi CursorLine gui=underline cterm=underline ctermfg=None guifg=None
     setlocal cursorline
 endif
