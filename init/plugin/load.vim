@@ -388,6 +388,9 @@ Plug 'pgdouyon/vim-evanesco'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-vinegar'
 
+" For debugging
+" Plug 'tpope/vim-scriptease'
+
 " ------------------------
 " custom neoterm (tox lib)
 " ------------------------
