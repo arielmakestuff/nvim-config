@@ -87,6 +87,7 @@ if !g:has_windows
     Plug 'ncm2/ncm2-tern', {'do': 'yarn'}
     Plug 'ncm2/ncm2-cssomni'
     Plug 'ncm2/ncm2-vim'
+    Plug 'ncm2/ncm2-syntax' | Plug 'Shougo/neco-syntax'
 endif
 
 " --------------------
