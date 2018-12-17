@@ -6,3 +6,4 @@ plugged/
 *.swp
 /tags
 /rplugin.vim
+/tmp/
