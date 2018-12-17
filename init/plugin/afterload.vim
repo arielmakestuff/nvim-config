@@ -167,5 +167,15 @@ let g:neomake_list_height = 4
 " call neomake#configure#automake('riw', 750)
 " let g:neomake_verbose = 3
 
+" --------------------
+" ncm2
+" --------------------
+" Press enter key to trigger snippet expansion
+" The parameters are the same as `:help feedkeys()`
+if !g:has_windows
+    inoremap <silent> <expr> <CR> ncm2_ultisnips#expand_or("\<CR>", 'n')
+endif
 
-
+" ============================================================================
+"
+" ============================================================================
