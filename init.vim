@@ -158,7 +158,9 @@ set pumheight=6
 
 " Theme
 " Note: theme customizations are found in after/plugin/colors.vim
-colorscheme OceanicNext
+if $TERM != 'linux'
+    colorscheme OceanicNext
+endif
 
 " colorscheme zenburn
 " colorscheme gruvbox
