@@ -174,6 +174,9 @@ let g:neomake_list_height = 4
 " The parameters are the same as `:help feedkeys()`
 if !g:has_windows
     inoremap <silent> <expr> <CR> ncm2_ultisnips#expand_or("\<CR>", 'n')
+    let g:ncm2_html_subscope_scope = ['html', 'xhtml', 'php', 'blade'
+                \, 'jinja', 'jinja2', 'vue.html.javascript.css', 'vue'
+                \, 'liquid']
 endif
 
 " ============================================================================
