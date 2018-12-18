@@ -1,3 +1,7 @@
+if !exists('g:colors_name')
+    finish
+endif
+
 if g:colors_name =~# 'zenburn'
     highlight Visual cterm=bold ctermfg=233 ctermbg=109
                 \ gui=bold guifg=#000d18 guibg=#8faf9f
