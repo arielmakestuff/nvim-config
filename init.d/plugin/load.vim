@@ -8,6 +8,11 @@
 let g:vimplug_plugin_dir = g:nvim_data_home . '/vim-plug'
 call plug#begin(g:vimplug_plugin_dir)
 
+" --------------------
+" vim-plug
+" --------------------
+" Only needed to have access to vim-plug's help docs
+Plug 'junegunn/vim-plug'
 
 " --------------------
 " vim-commentary
