@@ -5,6 +5,7 @@
 
 let g:nvim_data_home = $XDG_DATA_HOME . '/nvim'
 let g:nvim_config_home = $XDG_CONFIG_HOME . '/nvim'
+let g:nvim_config_file = g:nvim_config_home . '/init.vim'
 let g:has_windows = has('win32') || has('win64')
 
 " Default value
