@@ -259,7 +259,9 @@ let g:airline#extensions#tabline#show_tabs = 1
 " Show just filename
 let g:airline#extensions#tabline#fnamemod = ':t'
 " let g:airline_theme='badwolf'
-let g:airline_theme='oceanicnext'
+" let g:airline_theme='oceanicnext'
+" let g:airline_theme='onedark'
+let g:airline_theme='minimalist'
 
 " --------------------
 " Far
