@@ -5,7 +5,8 @@
 " ============================================================================
 
 
-call plug#begin()
+let g:vimplug_plugin_dir = g:nvim_data_home . '/vim-plug'
+call plug#begin(g:vimplug_plugin_dir)
 
 
 " --------------------
