@@ -243,7 +243,8 @@ inoremap <F9> <ESC>:UndotreeToggle<CR>
 " --------------------
 " Airline
 " --------------------
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
