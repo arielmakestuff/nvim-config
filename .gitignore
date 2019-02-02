@@ -7,3 +7,4 @@ plugged/
 /tags
 /rplugin.vim
 /tmp/
+/autoload/plug.vim
