@@ -16,6 +16,10 @@ if empty(glob(s:vimplug_file))
                 \ . g:nvim_config_file
 endif
 
+" default value: vertical topleft new
+" Note: this is a vim command
+let g:plug_window = 'split new'
+
 " --------------------
 "
 " --------------------
