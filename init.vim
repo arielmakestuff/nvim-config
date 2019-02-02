@@ -21,10 +21,10 @@ endif
 " Source init runparts
 " ============================================================================
 
-let g:init_runparts_dir = g:nvim_config_home . '/init'
+let g:init_runparts_dir = g:nvim_config_home . '/init.d'
 let g:runparts_source_cmd = 'source ' . g:init_runparts_dir . '/'
 
-" source init/ftplugin.vim
+" source init.d/ftplugin.vim
 exec g:runparts_source_cmd . 'ftplugin.vim'
 
 
