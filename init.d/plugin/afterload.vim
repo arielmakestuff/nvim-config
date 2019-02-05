@@ -98,7 +98,10 @@ if g:has_windows
     call deoplete#custom#source('_',
                 \ 'disabled_syntaxes', ['Comment', 'String'])
 
-    autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+    augroup InitWindowsPlatform
+        autocmd!
+        autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+    augroup END
 endif
 
 " --------------------
