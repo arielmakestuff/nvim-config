@@ -72,7 +72,10 @@ if !g:has_windows
     Plug 'Shougo/neco-vim'
 
     " enable ncm2 for all buffers
-    autocmd BufEnter * call ncm2#enable_for_buffer()
+    augroup InitWindowsPlatform
+        autocmd!
+        autocmd BufEnter * call ncm2#enable_for_buffer()
+    augroup END
 
     " IMPORTANT: :help Ncm2PopupOpen for more information
     set completeopt=noinsert,menuone,noselect
