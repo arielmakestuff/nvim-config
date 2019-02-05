@@ -159,7 +159,7 @@ set pumheight=6
 
 " Theme
 " Note: theme customizations are found in after/plugin/colors.vim
-if $TERM != 'linux'
+if $TERM !=? 'linux'
     " colorscheme OceanicNext
     colorscheme onedark
 endif
