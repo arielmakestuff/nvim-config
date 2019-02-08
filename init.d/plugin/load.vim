@@ -402,6 +402,7 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'pgdouyon/vim-evanesco'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-vinegar'
+Plug 'tpope/vim-abolish'
 
 " For debugging
 " Plug 'tpope/vim-scriptease'
