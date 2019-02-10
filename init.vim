@@ -323,9 +323,14 @@ inoremap <F7> <C-R>=strftime("%Y.%m.%d.%H%M")<CR>
 " Custom commands
 " ============================================================================
 
-" Install needed python packages
-command! OutdatedPy3Pkg echo(system(g:nvim_config_home
-            \ . '/bin/outdated-py3pkg.sh'))
+function! GetOutdatedPyPkg()
+    let l:data = trim(system('poetry run python -m pip list -o --format json'))
+    echo(system('jq -n --raw-output --argjson data '
+                \ . shellescape(l:data) . ' '
+                \ . shellescape('$data | .[].name')))
+endfunction
+
+command! OutdatedPyPkg call GetOutdatedPyPkg()
 
 
 " ============================================================================
