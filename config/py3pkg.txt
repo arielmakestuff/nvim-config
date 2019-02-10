@@ -1,0 +1,9 @@
+pip
+pynvim
+python-language-server[all]
+flake8
+bandit
+pydocstyle
+rstcheck
+vim-vint
+yapf
