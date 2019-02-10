@@ -127,7 +127,7 @@ set title
 " spell check
 set nospell
 set spelllang=en_ca
-let &spellfile = g:nvim_config_home . '/spellfile.utf-8.add'
+let &spellfile = g:nvim_config_home . '/spell/spellfile.utf-8.add'
 
 " Completion options
 set completeopt=menu,noinsert,noselect
