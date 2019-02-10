@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "nvimcfg"
+version = "1.0.0"
+description = "Python packages needed for nvim config"
+authors = ["Ariel De Ocampo <arielmakestuff@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+flake8 = "^3.7"
+bandit = "^1.5"
+pydocstyle = "^3.0"
+rstcheck = "^3.3"
+vim-vint = "^0.3.19"
+yapf = "^0.26.0"
+rope = "^0.11.0"
+autopep8 = "^1.4"
+pynvim = "^0.3.2"
+pip = "^19.0"
+python-language-server = "^0.22.0"
+mypy = "^0.670.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
