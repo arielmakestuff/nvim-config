@@ -6,6 +6,7 @@
 let g:nvim_data_home = $XDG_DATA_HOME . '/nvim'
 let g:nvim_config_home = $XDG_CONFIG_HOME . '/nvim'
 let g:nvim_config_file = g:nvim_config_home . '/init.vim'
+let g:nvim_var_dir = g:nvim_config_home . '/var'
 let g:has_windows = has('win32') || has('win64')
 
 " Default value
@@ -34,24 +35,50 @@ exec g:runparts_source_cmd . 'ftplugin.vim'
 " ============================================================================
 
 
+" Get the directory of the virtualenv used for the config's python dependencies
+"
+" This depends on the poetry command being on the $PATH
+"
+" Note: the following will cache the directory path for future nvim startup so
+" that there isn't a startup delay. If the cache file doesn't exist, it will
+" call poetry to create the virtualenv and then return the path to the
+" virtualenv and store it in a cache file.
+let s:py3venv_dir_cache = g:nvim_var_dir . '/py3venv.cache'
+let s:venv_dir = ''
+
+if empty(glob(s:py3venv_dir_cache))
+    call system('poetry install')
+    call mkdir(g:nvim_var_dir, 'p')
+    let s:py_venv_env = 'import os;print(os.environ['
+                \ . shellescape('VIRTUAL_ENV') . '])'
+    let s:venv_dir = trim(system('poetry run python -c '
+                \ . shellescape(s:py_venv_env)))
+    call writefile([s:venv_dir], s:py3venv_dir_cache)
+
+    " Cleanup
+    unlet s:venv_dir
+    unlet s:py_venv_env
+else
+    let s:py3venv_file_list = readfile(s:py3venv_dir_cache)
+    let s:venv_dir = s:py3venv_file_list[0]
+
+    " Cleanup
+    unlet s:py3venv_file_list
+endif
+
 " Prevent any plugins from using the virtual env, instead opting for the
 " interpreter specified by python3_host_prog
 let $VIRTUAL_ENV=''
 
-
 if g:has_windows
-    let g:python3_hostdir = g:nvim_data_home . '/pyvenv3'
+    let g:python3_hostdir = s:venv_dir
     let g:python3_bindir = g:python3_hostdir . '/Scripts'
     let g:python3_host_prog = g:python3_bindir . '/python.exe'
-    " let g:python36_hostdir = g:vim_data_home . '/pyvenv36'
-    " let g:python36_host_prog = g:python36_hostdir . '/Scripts/python.exe'
 else
-    let g:python3_hostdir = g:nvim_data_home . '/pyvenv3'
+    let g:python3_hostdir = s:venv_dir
     let g:python3_bindir = g:python3_hostdir . '/bin'
     let g:python3_host_prog = g:python3_bindir . '/python3'
-    " let g:python_host_prog = 'python2.7'
 endif
-
 
 " ============================================================================
 " Shell
