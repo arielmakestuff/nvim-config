@@ -6,9 +6,7 @@
 # Distributed under terms of the MIT license.
 #
 
-# This script accepts a single argument: path to python executable
+# This script depends on the jq tool being found on $PATH
 
-PY_BIN=$1
-
-$PY_BIN -m pip list -o --format json \
+poetry run python -m pip list -o --format json \
     | jq --raw-output '.[].name'

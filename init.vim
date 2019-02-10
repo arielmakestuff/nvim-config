@@ -324,9 +324,8 @@ inoremap <F7> <C-R>=strftime("%Y.%m.%d.%H%M")<CR>
 " ============================================================================
 
 " Install needed python packages
-let s:outdated_py3pkg = '!' . g:nvim_config_home . '/bin/outdated-py3pkg.sh '
-            \ . g:python3_host_prog
-command! OutdatedPy3Pkg exec s:outdated_py3pkg
+command! OutdatedPy3Pkg echo(system(g:nvim_config_home
+            \ . '/bin/outdated-py3pkg.sh'))
 
 
 " ============================================================================
