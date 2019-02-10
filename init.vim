@@ -68,7 +68,6 @@ if g:has_windows
     nmap <Leader>c :term bash --login -i<CR>
     exec 'tnoremap <Leader>e exit<CR>exit'
                 \ . g:vim_cr_char
-    let $PATH= g:python3_hostdir . '/Scripts;' . $PATH
 elseif &shell =~# 'fish$'
     set shell=/bin/zsh
 endif

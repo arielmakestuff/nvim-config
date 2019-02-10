@@ -1,6 +1,17 @@
 " Add any plugin setup/configuration needed before plugins are loaded
 
 " --------------------
+" python
+" --------------------
+
+" Change path
+if g:has_windows
+    let $PATH = g:python3_bindir . ';' . $PATH
+else
+    let $PATH = g:python3_bindir . ':' . $PATH
+endif
+
+" --------------------
 " vim-plug
 " --------------------
 " Note: the below depends on curl being in $PATH
