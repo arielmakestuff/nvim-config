@@ -56,7 +56,6 @@ if empty(glob(s:py3venv_dir_cache))
     call writefile([s:venv_dir], s:py3venv_dir_cache)
 
     " Cleanup
-    unlet s:venv_dir
     unlet s:py_venv_env
 else
     let s:py3venv_file_list = readfile(s:py3venv_dir_cache)
