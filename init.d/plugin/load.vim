@@ -404,6 +404,10 @@ Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-abolish'
 
+if !g:has_windows
+    Plug 'tpope/vim-eunuch'
+endif
+
 " For debugging
 " Plug 'tpope/vim-scriptease'
 
