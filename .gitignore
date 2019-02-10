@@ -8,3 +8,4 @@ plugged/
 /rplugin.vim
 /tmp/
 /autoload/plug.vim
+*.spl
