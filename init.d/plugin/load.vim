@@ -237,6 +237,12 @@ endif
 
 set wildignore=.git/
 
+" Fuzzy search lines in buffer
+nnoremap <Leader>g :Denite -cursor-wrap=true line:all:noempty<CR>
+vnoremap <Leader>g <Esc>:Denite -cursor-wrap=true line:all:noempty<CR>
+nnoremap <Leader>G :Denite -cursor-wrap=true line:backward:noempty<CR>
+vnoremap <Leader>G <Esc>:Denite -cursor-wrap=true line:backward:noempty<CR>
+
 " " Fuzzy file search
 " " nnoremap <F3> :Denite -direction=botright file_rec<CR>
 " " vnoremap <F3> <Esc>:Denite -direction=botright file_rec<CR>
