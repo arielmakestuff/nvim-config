@@ -31,6 +31,8 @@ let g:lsp_install_cmd = './install.sh'
 if g:has_windows
     let g:lsp_install_cmd = 'powershell ./install.ps1'
 endif
+let g:LanguageClient_settingsPath = g:nvim_config_home
+            \ . '/config/languageclient/settings.json'
 
 " Plug 'autozimu/LanguageClient-neovim', {'do': ':UpdateRemotePlugins'}
 Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': g:lsp_install_cmd}
