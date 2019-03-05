@@ -59,7 +59,7 @@ let g:rustup_toolchain = 'nightly'
 " --------------------
 " Javascript vars
 " --------------------
-let g:lsp_javascript_cmd = ['javascript-typescript-stdio']
+let g:lsp_javascript_cmd = ['typescript-language-server', '--stdio']
 if g:has_windows
     let g:lsp_javascript_cmd[0] = g:lsp_javascript_cmd[0] . '.cmd'
     let g:lsp_javascript_cmd = ['cmd', '/C'] + g:lsp_javascript_cmd
