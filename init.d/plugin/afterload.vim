@@ -68,12 +68,20 @@ endif
 " --------------------
 " LanguageClient
 " --------------------
+" let g:LanguageClient_serverCommands = {
+"     \ 'rust': ['rustup', 'run', g:rustup_toolchain, 'rls'],
+"     \ 'python': ['pyls'],
+"     \ 'javascript': g:lsp_javascript_cmd,
+"     \ 'javascript.jsx': g:lsp_javascript_cmd,
+"     \ }
+
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['rustup', 'run', g:rustup_toolchain, 'rls'],
-    \ 'python': ['pyls'],
+    \ 'python': ['mspyls'],
     \ 'javascript': g:lsp_javascript_cmd,
     \ 'javascript.jsx': g:lsp_javascript_cmd,
     \ }
+
 let g:LanguageClient_autoStart = 1
 let g:LanguageClient_hasSnippetSupport = 0
 " if !has('win32') && !has('win64')
