@@ -29,7 +29,7 @@ endif
 
 " default value: vertical topleft new
 " Note: this is a vim command
-let g:plug_window = 'split new'
+let g:plug_window = '35split new'
 
 " --------------------
 "
