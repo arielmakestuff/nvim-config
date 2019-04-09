@@ -11,13 +11,13 @@ bandit = "^1.5"
 pydocstyle = "^3.0"
 rstcheck = "^3.3"
 vim-vint = "^0.3.19"
-yapf = "^0.26.0"
-rope = "^0.11.0"
+yapf = "^0.27"
+rope = "^0.14.0"
 autopep8 = "^1.4"
 pynvim = "^0.3.2"
 pip = "^19.0"
-python-language-server = "^0.22.0"
-mypy = "^0.670.0"
+python-language-server = "^0.26.1"
+mypy = "^0.700"
 
 [tool.poetry.dev-dependencies]
 
