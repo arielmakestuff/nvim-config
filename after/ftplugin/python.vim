@@ -67,7 +67,7 @@ let g:ale_fixers = {
             \  'python': ['yapf'],
             \}
 let g:ale_linters = {
-            \  'python': ['flake8', 'mypy', 'bandit', 'pydocstyle'],
+            \  'python': ['flake8', 'bandit', 'pydocstyle'],
             \}
 
 let g:ale_fix_on_save = 1
