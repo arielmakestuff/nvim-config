@@ -68,16 +68,9 @@ endif
 " --------------------
 " LanguageClient
 " --------------------
-" let g:LanguageClient_serverCommands = {
-"     \ 'rust': ['rustup', 'run', g:rustup_toolchain, 'rls'],
-"     \ 'python': ['pyls'],
-"     \ 'javascript': g:lsp_javascript_cmd,
-"     \ 'javascript.jsx': g:lsp_javascript_cmd,
-"     \ }
-
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['rustup', 'run', g:rustup_toolchain, 'rls'],
-    \ 'python': ['mspyls'],
+    \ 'python': ['pyls'],
     \ 'javascript': g:lsp_javascript_cmd,
     \ 'javascript.jsx': g:lsp_javascript_cmd,
     \ }
