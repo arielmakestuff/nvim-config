@@ -12,7 +12,7 @@ description = "A tool that automatically formats Python code to conform to the P
 name = "autopep8"
 optional = false
 python-versions = "*"
-version = "1.4.3"
+version = "1.4.4"
 
 [package.dependencies]
 pycodestyle = ">=2.4.0"
@@ -336,12 +336,12 @@ python-versions = "*"
 version = "0.27.0"
 
 [metadata]
-content-hash = "c71eccc4b8897104ccdc45702bcae0a5e68957371d59df89c49ab0d6950e6c2d"
+content-hash = "52600c45c6c96e3459c4de253f44ac0cdd065ea4e45fc5a6a2335d59ab830242"
 python-versions = "^3.7"
 
 [metadata.hashes]
 ansicolor = ["313b217a7abd29c8560f1b5a20fe40ec61e84cfddc514602d544159f49bfa342", "d17e1b07b9dd7ded31699fbca53ae6cd373584f9b6dcbc124d1f321ebad31f1d"]
-autopep8 = ["33d2b5325b7e1afb4240814fe982eea3a92ebea712869bfd08b3c0393404248c"]
+autopep8 = ["4d8eec30cc81bc5617dbf1218201d770dc35629363547f17577c61683ccfb3ee"]
 bandit = ["6102b5d6afd9d966df5054e0bdfc2e73a24d0fea400ec25f2e54c134412158d7", "9413facfe9de1e1bd291d525c784e1beb1a55c9916b51dae12979af63a69ba4c"]
 chardet = ["84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae", "fc323ffcaeaed0e0a02bf4d117757b98aed530d9ed4531e3e15460124c106691"]
 docutils = ["02aec4bd92ab067f6ff27a38a38a41173bf01bed8f89157768c1573f53e474a6", "51e64ef2ebfb29cae1faa133b3710143496eca21c530f3f71424d77687764274", "7a4bd47eaf6596e1295ecb11361139febe29b084a87bf005bf899f9a42edc3c6"]
