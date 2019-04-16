@@ -94,7 +94,6 @@ if !g:has_windows
     Plug 'ncm2/ncm2-rst-subscope'
     Plug 'ncm2/ncm2-ultisnips'
     Plug 'ncm2/ncm2-match-highlight'
-    Plug 'ncm2/ncm2-jedi'
     Plug 'ncm2/ncm2-tern', {'do': 'yarn'}
     Plug 'ncm2/ncm2-cssomni'
     Plug 'ncm2/ncm2-vim'
