@@ -394,6 +394,25 @@ let g:table_mode_header_fillchar = '='
 Plug 'airblade/vim-gitgutter'
 
 " --------------------
+" vim-package-info
+" --------------------
+function! PostInstall_VimPackageInfo(info)
+    " info is a dictionary with 3 fields
+    " - name:   name of the plugin
+    " - status: 'installed', 'updated', or 'unchanged'
+    " - force:  set on PlugInstall! or PlugUpdate!
+    if a:info.status ==# 'installed' || a:info.force
+        !npm install
+        UpdateRemotePlugins
+    endif
+endfunction
+
+if has('nvim-0.3.2')
+    Plug 'meain/vim-package-info',
+                \ { 'do': function('PostInstall_VimPackageInfo') }
+endif
+
+" --------------------
 " Others
 " --------------------
 Plug 'honza/vim-snippets'
