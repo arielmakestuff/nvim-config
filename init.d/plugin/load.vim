@@ -413,6 +413,11 @@ if has('nvim-0.3.2')
 endif
 
 " --------------------
+" nvim-gdb
+" --------------------
+Plug 'sakhnik/nvim-gdb'
+
+" --------------------
 " Others
 " --------------------
 Plug 'honza/vim-snippets'
