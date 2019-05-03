@@ -254,12 +254,6 @@ vnoremap <Leader>B <Esc>:Denite -cursor-wrap=true line:backward:noempty<CR>
 Plug 'raghur/fruzzy', { 'do': { -> fruzzy#install() } }
 let g:fruzzy#usenative = 1
 
-
-" " --------------------
-" " vim-grepper
-" " --------------------
-Plug 'mhinz/vim-grepper'
-
 " --------------------
 " ctrlsf
 " --------------------
