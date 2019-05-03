@@ -201,18 +201,6 @@ endfunction
 
 
 " --------------------
-" Ctrlspace
-" --------------------
-" Plug 'vim-ctrlspace/vim-ctrlspace'
-" Search buffers
-" nnoremap <C-Space> :CtrlSpace<CR>
-" vnoremap <C-Space> <Esc>:CtrlSpace<CR>
-
-" Search files
-" nnoremap <F3> :CtrlSpace O<CR>
-" vnoremap <F3> <Esc>:CtrlSpace O<CR>
-
-" --------------------
 " vim-rooter
 " --------------------
 Plug 'airblade/vim-rooter'
@@ -347,12 +335,6 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " let g:airline_theme='oceanicnext'
 " let g:airline_theme='onedark'
 let g:airline_theme='minimalist'
-
-" --------------------
-" Far
-" --------------------
-"  This is a multi file search and replace plugin
-" Plug 'brooth/far.vim', {'do': ':UpdateRemotePlugins'}
 
 " --------------------
 " Emmet
