@@ -268,6 +268,11 @@ if executable('rg') || executable('ag')
 endif
 
 " --------------------
+" Multiple cursors
+" --------------------
+Plug 'terryma/vim-multiple-cursors'
+
+" --------------------
 " Better whitespace
 " --------------------
 Plug 'ntpeters/vim-better-whitespace'
