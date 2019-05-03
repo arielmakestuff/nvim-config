@@ -260,6 +260,12 @@ let g:fruzzy#usenative = 1
 " " --------------------
 Plug 'mhinz/vim-grepper'
 
+" --------------------
+" ctrlsf
+" --------------------
+if executable('rg') || executable('ag')
+    Plug 'dyng/ctrlsf.vim'
+endif
 
 " --------------------
 " Better whitespace
