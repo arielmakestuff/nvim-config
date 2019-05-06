@@ -255,6 +255,12 @@ endif
 Plug 'terryma/vim-multiple-cursors'
 
 " --------------------
+" git-messenger
+" --------------------
+Plug 'rhysd/git-messenger.vim'
+let g:git_messenger_always_into_popup = v:true
+
+" --------------------
 " Better whitespace
 " --------------------
 Plug 'ntpeters/vim-better-whitespace'
