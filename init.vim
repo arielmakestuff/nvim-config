@@ -80,6 +80,47 @@ else
 endif
 
 " ============================================================================
+" Javascript integration
+" ============================================================================
+
+" This depends on python integration being properly setup
+
+let g:node_envdir = g:nvim_data_home . '/nodeenv'
+
+if empty(glob(g:node_envdir))
+    echo('Installing node env...')
+    call mkdir(g:node_envdir, 'p')
+    let s:cmd_setup_env = g:python3_bindir
+                \ . '/nodeenv --force -c '
+                \ . g:node_envdir
+    call system(s:cmd_setup_env)
+
+    let s:cur_dir = getcwd()
+    exec 'cd ' . g:node_envdir
+    let s:setup_neovim = g:node_envdir . '/bin/npm install neovim'
+    call system(s:setup_neovim)
+    exec 'cd ' . s:cur_dir
+
+    " Cleanup
+    unlet s:cur_dir
+    unlet s:setup_neovim
+    unlet s:cmd_setup_env
+endif
+
+let g:node_host_prog = g:node_envdir . '/node_modules/.bin/neovim-node-host'
+
+if g:has_windows
+    let s:env_path_sep = ';'
+else
+    let s:env_path_sep = ':'
+endif
+
+let $PATH = g:node_envdir . '/bin'
+            \ . s:env_path_sep . $PATH
+
+unlet s:env_path_sep
+
+" ============================================================================
 " Shell
 " ============================================================================
 
