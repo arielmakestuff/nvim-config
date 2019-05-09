@@ -85,6 +85,7 @@ let g:LanguageClient_hasSnippetSupport = 0
 nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
 nnoremap <Leader>r :call LanguageClient_textDocument_rename()<CR>
+nnoremap <Leader>e :call LanguageClient#explainErrorAtPoint()<CR>
 
 set completefunc=LanguageClient#complete
 
