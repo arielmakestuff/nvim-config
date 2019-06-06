@@ -24,7 +24,7 @@ exec s:denite_filerec_exec
 
 
 if s:rooter_root_dir !=? ''
-    exec 'nnoremap <Leader>g :Denite -mode=normal grep::'
+    exec 'nnoremap <Leader>g :Denite grep::'
                 \ . s:rooter_root_dir . g:vim_cr_char
 else
     nnoremap <Leader>g :Denite -mode=normal grep<CR>
