@@ -34,6 +34,7 @@ endif
 let g:LanguageClient_settingsPath = g:nvim_config_home
             \ . '/config/languageclient/settings.json'
 let g:LanguageClient_useVirtualText = 0
+let g:LanguageClient_useFloatingHover = 1
 
 " Plug 'autozimu/LanguageClient-neovim', {'do': ':UpdateRemotePlugins'}
 Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': g:lsp_install_cmd}
