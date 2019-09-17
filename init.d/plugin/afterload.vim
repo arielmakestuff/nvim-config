@@ -167,7 +167,7 @@ nnoremap <Leader>G :Denite grep<CR>
 
 " Further denite configuration is in after/plugin/rooter.vim in order to set the
 " rooter_root_dir variable
-let g:denite_filerec_cmd = ':Denite file/rec'
+let g:denite_filerec_cmd = ':Denite -split=floating file/rec'
 let g:denite_filerec_bind = '<Leader>f'
 
 exec 'nnoremap <Leader>F '
