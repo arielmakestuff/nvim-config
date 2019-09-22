@@ -279,10 +279,16 @@ endfunction
 " --------------------
 " Set relative number
 " --------------------
+function! DeniteBufferRelNum()
+    if &filetype !=? 'denite' && &filetype !=? 'denite-filter'
+        call RelNumberToggle()
+    endif
+endfunction
+
 augroup numbertoggle
     autocmd!
-    autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-    autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+    autocmd BufEnter,FocusGained,InsertLeave * call DeniteBufferRelNum()
+    autocmd BufLeave,FocusLost,InsertEnter   * call DeniteBufferRelNum()
 augroup END
 
 
