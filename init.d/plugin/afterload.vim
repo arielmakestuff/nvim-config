@@ -91,6 +91,7 @@ set completefunc=LanguageClient#complete
 
 " call LanguageClient_setLoggingLevel('DEBUG')
 " let g:LanguageClient_loggingLevel = 'DEBUG'
+" let g:LanguageClient_loggingFile = '/tmp/LanguageClient.log'
 
 " --------------------
 " deoplete
