@@ -254,7 +254,7 @@ endif
 " --------------------
 " Multiple cursors
 " --------------------
-Plug 'terryma/vim-multiple-cursors'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 " --------------------
 " git-messenger
