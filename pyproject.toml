@@ -19,6 +19,7 @@ pip = "^19.3.1"
 python-language-server = "^0.34"
 mypy = "^0.782"
 nodeenv = "^1"
+jedi-language-server = "^0.19.1"
 
 [tool.poetry.dev-dependencies]
 

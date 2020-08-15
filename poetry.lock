@@ -43,6 +43,14 @@ version = "3.0.4"
 
 [[package]]
 category = "main"
+description = "Composable command line interface toolkit"
+name = "click"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+version = "7.1.2"
+
+[[package]]
+category = "main"
 description = "Cross-platform colored terminal text."
 marker = "platform_system == \"Windows\""
 name = "colorama"
@@ -115,6 +123,19 @@ parso = ">=0.7.0,<0.8.0"
 [package.extras]
 qa = ["flake8 (3.7.9)"]
 testing = ["Django (<3.1)", "colorama", "docopt", "pytest (>=3.9.0,<5.0.0)"]
+
+[[package]]
+category = "main"
+description = "A language server for Jedi!"
+name = "jedi-language-server"
+optional = false
+python-versions = ">=3.6,<4.0"
+version = "0.19.1"
+
+[package.dependencies]
+click = ">=7.0"
+jedi = ">=0.17.2"
+pygls = ">=0.8.1"
 
 [[package]]
 category = "main"
@@ -220,6 +241,19 @@ name = "pyflakes"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 version = "2.2.0"
+
+[[package]]
+category = "main"
+description = "a pythonic generic language server (pronounced like \"pie glass\")."
+name = "pygls"
+optional = false
+python-versions = "*"
+version = "0.9.0"
+
+[package.extras]
+dev = ["bandit (1.6.0)", "flake8 (3.7.7)", "mypy (0.761)"]
+docs = ["sphinx (2.0.1)", "sphinx-rtd-theme (0.4.3)"]
+test = ["mock (3.0.5)", "pytest (4.5.0)", "pytest-asyncio (0.10.0)"]
 
 [[package]]
 category = "main"
@@ -398,7 +432,7 @@ python-versions = "*"
 version = "0.30.0"
 
 [metadata]
-content-hash = "2f3243c62911bc49959503367fcd190624b6702debeb6148cc64da4a71bd4b5e"
+content-hash = "fd6e628c3e09573c6d221d3af257f77cef1281febd2b958290aa8cf2f3e5b5fb"
 lock-version = "1.0"
 python-versions = "^3.8"
 
@@ -417,6 +451,10 @@ bandit = [
 chardet = [
     {file = "chardet-3.0.4-py2.py3-none-any.whl", hash = "sha256:fc323ffcaeaed0e0a02bf4d117757b98aed530d9ed4531e3e15460124c106691"},
     {file = "chardet-3.0.4.tar.gz", hash = "sha256:84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae"},
+]
+click = [
+    {file = "click-7.1.2-py2.py3-none-any.whl", hash = "sha256:dacca89f4bfadd5de3d7489b7c8a566eee0d3676333fbb50030263894c38c0dc"},
+    {file = "click-7.1.2.tar.gz", hash = "sha256:d2b5255c7c6349bc1bd1e59e08cd12acbbd63ce649f2588755783aa94dfb6b1a"},
 ]
 colorama = [
     {file = "colorama-0.4.3-py2.py3-none-any.whl", hash = "sha256:7d73d2a99753107a36ac6b455ee49046802e59d9d076ef8e47b61499fa29afff"},
@@ -460,6 +498,10 @@ greenlet = [
 jedi = [
     {file = "jedi-0.17.2-py2.py3-none-any.whl", hash = "sha256:98cc583fa0f2f8304968199b01b6b4b94f469a1f4a74c1560506ca2a211378b5"},
     {file = "jedi-0.17.2.tar.gz", hash = "sha256:86ed7d9b750603e4ba582ea8edc678657fb4007894a12bcf6f4bb97892f31d20"},
+]
+jedi-language-server = [
+    {file = "jedi-language-server-0.19.1.tar.gz", hash = "sha256:6542860dad38248c052a6b8362924878fc4565e40e9afb681ca2f08d9acd2849"},
+    {file = "jedi_language_server-0.19.1-py3-none-any.whl", hash = "sha256:2005797be942d675238b6d0117a7b60f0003e0c5e6ace763ed66d170b1854643"},
 ]
 mccabe = [
     {file = "mccabe-0.6.1-py2.py3-none-any.whl", hash = "sha256:ab8a6258860da4b6677da4bd2fe5dc2c659cff31b3ee4f7f5d64e79735b80d42"},
@@ -531,6 +573,10 @@ pydocstyle = [
 pyflakes = [
     {file = "pyflakes-2.2.0-py2.py3-none-any.whl", hash = "sha256:0d94e0e05a19e57a99444b6ddcf9a6eb2e5c68d3ca1e98e90707af8152c90a92"},
     {file = "pyflakes-2.2.0.tar.gz", hash = "sha256:35b2d75ee967ea93b55750aa9edbbf72813e06a66ba54438df2cfac9e3c27fc8"},
+]
+pygls = [
+    {file = "pygls-0.9.0-py3-none-any.whl", hash = "sha256:8fab2fa1286ce23b9f33c5779950ce6293122f564d8cc4c669907f39953f5c89"},
+    {file = "pygls-0.9.0.tar.gz", hash = "sha256:0be0dce93745cba445b7a2568910ca7e45a3865347f01860eff9ed3e37e64e7b"},
 ]
 pynvim = [
     {file = "pynvim-0.4.1.tar.gz", hash = "sha256:55e918d664654cfa1c9889d3dbe7c63e9f338df5d49471663f78d54c85e84c58"},
