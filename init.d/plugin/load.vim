@@ -429,6 +429,7 @@ Plug 'pgdouyon/vim-evanesco'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-abolish'
+Plug 'christianrondeau/vim-base64'
 
 if !g:has_windows
     Plug 'tpope/vim-eunuch'
