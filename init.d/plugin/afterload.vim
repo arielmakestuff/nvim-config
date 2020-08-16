@@ -181,10 +181,16 @@ exec 'nnoremap <Leader>F '
             \ . g:denite_filerec_cmd
             \ . '<CR>'
 
+" " Use vim-clap as the matcher
+call denite#custom#source('_', 'matchers', ['matcher/clap'])
+
+call denite#custom#filter('matcher/clap', 'clap_path',
+            \ g:vimplug_plugin_dir . '/vim-clap')
+
 " --------------------
-" fruzzy
+" vim-clap
 " --------------------
-call denite#custom#source('_', 'matchers', ['matcher/fruzzy'])
+let g:clap_theme = 'material_design_dark'
 
 
 " --------------------

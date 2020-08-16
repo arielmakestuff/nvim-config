@@ -239,10 +239,9 @@ vnoremap <Leader>B <Esc>:Denite line:backward:noempty<CR>
 " " vnoremap <F3> <Esc>:Denite -direction=botright file_rec<CR>
 
 " --------------------
-" fruzzy
+" vim-clap
 " --------------------
-Plug 'raghur/fruzzy', { 'do': { -> fruzzy#install() } }
-let g:fruzzy#usenative = 1
+Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 
 " --------------------
 " ctrlsf
