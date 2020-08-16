@@ -138,7 +138,7 @@ Plug 'benekastah/neomake'
 " --------------------
 " ALE
 " --------------------
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 
 " Disable the error message advising of conflict with neomake
 let g:ale_emit_conflict_warnings = 0
