@@ -174,12 +174,12 @@ nnoremap <Leader>G :Denite grep<CR>
 
 " Further denite configuration is in after/plugin/rooter.vim in order to set the
 " rooter_root_dir variable
-let g:denite_filerec_cmd = ':Denite -split=floating file/rec'
-let g:denite_filerec_bind = '<Leader>f'
+" let g:denite_filerec_cmd = ':Denite -split=floating file/rec'
+" let g:denite_filerec_bind = '<Leader>f'
 
-exec 'nnoremap <Leader>F '
-            \ . g:denite_filerec_cmd
-            \ . '<CR>'
+" exec 'nnoremap <Leader>F '
+"             \ . g:denite_filerec_cmd
+"             \ . '<CR>'
 
 " " Use vim-clap as the matcher
 call denite#custom#source('_', 'matchers', ['matcher/clap'])
@@ -192,6 +192,8 @@ call denite#custom#filter('matcher/clap', 'clap_path',
 " --------------------
 let g:clap_theme = 'material_design_dark'
 
+nnoremap <leader>f :Clap filer<CR>
+nnoremap <leader>F :Clap files<CR>
 
 " --------------------
 " Far
