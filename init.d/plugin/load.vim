@@ -149,6 +149,10 @@ let g:ale_emit_conflict_warnings = 0
 Plug 'ludovicchabant/vim-gutentags'
 let g:gutentags_enabled = 0
 
+" --------------------
+" vista.vim
+" --------------------
+Plug 'liuchengxu/vista.vim'
 
 " --------------------
 " tagbar
