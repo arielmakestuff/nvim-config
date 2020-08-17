@@ -189,7 +189,7 @@ set laststatus=2
 set ttimeoutlen=0
 set clipboard=unnamed
 set showmatch
-set number
+" set number
 set title
 
 " spell check
@@ -254,10 +254,26 @@ endfunction
 
 function! RelNumberToggle()
     if(&relativenumber == 1)
-        set norelativenumber
+        setlocal norelativenumber
     else
-        set relativenumber
+        setlocal relativenumber
     endif
+endfunction
+
+
+function! SetNumber()
+    if &buftype ==? 'nofile'
+        setlocal nonumber
+        setlocal norelativenumber
+    else
+        setlocal number
+        setlocal relativenumber
+    endif
+endfunction
+
+
+function! UnsetRelNumber()
+    setlocal norelativenumber
 endfunction
 
 
@@ -279,18 +295,19 @@ endfunction
 " --------------------
 " Set relative number
 " --------------------
-function! DeniteBufferRelNum()
-    if &filetype !=? 'denite' && &filetype !=? 'denite-filter'
-        call RelNumberToggle()
-    endif
-endfunction
-
 augroup numbertoggle
     autocmd!
-    autocmd BufEnter,FocusGained,InsertLeave * call DeniteBufferRelNum()
-    autocmd BufLeave,FocusLost,InsertEnter   * call DeniteBufferRelNum()
+    autocmd BufEnter,FocusGained,InsertLeave * call SetNumber()
+    autocmd BufLeave,FocusLost,InsertEnter   * call UnsetRelNumber()
 augroup END
 
+augroup terminal_buffer
+    autocmd!
+    autocmd TermOpen *
+                \ setlocal listchars= nonumber norelativenumber
+    autocmd BufEnter,BufWinEnter,WinEnter term://*
+                \ setlocal listchars= nonumber norelativenumber
+augroup END
 
 " --------------------
 " Misc
