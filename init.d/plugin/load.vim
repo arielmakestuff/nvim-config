@@ -153,14 +153,7 @@ let g:gutentags_enabled = 0
 " vista.vim
 " --------------------
 Plug 'liuchengxu/vista.vim'
-
-" --------------------
-" tagbar
-" --------------------
-Plug 'majutsushi/tagbar'
-nnoremap <F8> :TagbarToggle<CR>
-inoremap <F8> <C-c>:TagbarToggle<CR>a
-
+nnoremap <F8> :Vista!!<CR>
 
 " --------------------
 " UltiSnips
