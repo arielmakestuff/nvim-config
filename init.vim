@@ -25,6 +25,7 @@ endif
 
 let g:init_runparts_dir = g:nvim_config_home . '/init.d'
 let g:runparts_source_cmd = 'source ' . g:init_runparts_dir . '/'
+let g:runparts_plugsrc_cmd = g:runparts_source_cmd . 'plugin/'
 
 " source init.d/ftplugin.vim
 exec g:runparts_source_cmd . 'ftplugin.vim'
@@ -149,16 +150,16 @@ endif
 " ============================================================================
 
 " source init/plugin/beforeload.vim
-exec g:runparts_source_cmd . 'plugin/beforeload.vim'
+exec g:runparts_plugsrc_cmd . 'beforeload.vim'
 
 " source init/plugin/load.vim
-exec g:runparts_source_cmd . 'plugin/load.vim'
+exec g:runparts_plugsrc_cmd . 'load.vim'
 
 " source init/plugin/config.vim
-exec g:runparts_source_cmd . 'plugin/config.vim'
+exec g:runparts_plugsrc_cmd . 'config.vim'
 
 " source init/plugin/afterload.vim
-exec g:runparts_source_cmd . 'plugin/afterload.vim'
+exec g:runparts_plugsrc_cmd . 'afterload.vim'
 
 " ============================================================================
 " Default settings
