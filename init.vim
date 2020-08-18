@@ -154,6 +154,9 @@ exec g:runparts_source_cmd . 'plugin/beforeload.vim'
 " source init/plugin/load.vim
 exec g:runparts_source_cmd . 'plugin/load.vim'
 
+" source init/plugin/config.vim
+exec g:runparts_source_cmd . 'plugin/config.vim'
+
 " source init/plugin/afterload.vim
 exec g:runparts_source_cmd . 'plugin/afterload.vim'
 
