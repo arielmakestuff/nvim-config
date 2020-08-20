@@ -4,24 +4,24 @@
 "
 " ============================================================================
 
-nnoremap <C-Space> :Denite buffer<CR>
-vnoremap <C-Space> <Esc>:Denite buffer<CR>
-if g:has_windows
-    let s:denite_outline_cmd = '<Leader>` :Denite '
-                \ . 'outline'
-    exec 'nnoremap ' . s:denite_outline_cmd . g:vim_cr_char
-    exec 'vnoremap ' . s:denite_outline_cmd . g:vim_cr_char
-    unlet s:denite_outline_cmd
-else
-    nnoremap <Leader>` :Denite outline<CR>
-    vnoremap <Leader>` <Esc>:Denite outline<CR>
-endif
+" nnoremap <C-Space> :Denite buffer<CR>
+" vnoremap <C-Space> <Esc>:Denite buffer<CR>
+" if g:has_windows
+"     let s:denite_outline_cmd = '<Leader>` :Denite '
+"                 \ . 'outline'
+"     exec 'nnoremap ' . s:denite_outline_cmd . g:vim_cr_char
+"     exec 'vnoremap ' . s:denite_outline_cmd . g:vim_cr_char
+"     unlet s:denite_outline_cmd
+" else
+"     nnoremap <Leader>` :Denite outline<CR>
+"     vnoremap <Leader>` <Esc>:Denite outline<CR>
+" endif
 
 set wildignore=.git/
 
 " Fuzzy search lines in buffer
-nnoremap <Leader>b :Denite line:all:noempty<CR>
-vnoremap <Leader>b <Esc>:Denite line:all:noempty<CR>
+" nnoremap <Leader>b :Denite line:all:noempty<CR>
+" vnoremap <Leader>b <Esc>:Denite line:all:noempty<CR>
 nnoremap <Leader>B :Denite line:backward:noempty<CR>
 vnoremap <Leader>B <Esc>:Denite line:backward:noempty<CR>
 

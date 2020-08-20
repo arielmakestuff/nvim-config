@@ -233,6 +233,12 @@ let g:clap_theme = 'material_design_dark'
 
 nnoremap <leader>f :Clap filer<CR>
 nnoremap <leader>F :Clap files<CR>
+nnoremap <Leader>b :Clap lines<CR>
+vnoremap <Leader>b <Esc>:Clap lines<CR>
+nnoremap <C-Space> :Clap buffers<CR>
+vnoremap <C-Space> <Esc>:Clap buffers<CR>
+nnoremap <Leader>` :Clap tags<CR>
+vnoremap <Leader>` <Esc>:Clap tags<CR>
 
 " --------------------
 " Far
