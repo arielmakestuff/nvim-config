@@ -50,6 +50,18 @@ Plug 'christianrondeau/vim-base64'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-speeddating'
 
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'prabirshrestha/asyncomplete-buffer.vim'
+Plug 'prabirshrestha/asyncomplete-emmet.vim'
+Plug 'prabirshrestha/asyncomplete-file.vim'
+Plug 'prabirshrestha/asyncomplete-ultisnips.vim'
+Plug 'Shougo/neco-vim'
+Plug 'prabirshrestha/asyncomplete-necovim.vim'
+
 " custom neoterm (tox lib)
 " ------------------------
 Plug 'arielmakestuff/neoterm', { 'branch': 'develop' }
@@ -135,54 +147,6 @@ endif
 " ------
 if !g:has_windows
     Plug 'tpope/vim-eunuch'
-endif
-
-
-" LanguageClient
-" --------------
-let g:lsp_install_cmd = './install.sh'
-if g:has_windows
-    let g:lsp_install_cmd = 'powershell ./install.ps1'
-endif
-
-" Plug 'autozimu/LanguageClient-neovim', {'do': ':UpdateRemotePlugins'}
-Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': g:lsp_install_cmd}
-
-
-" deoplete
-" --------
-if g:has_windows
-    function! DoRemote(arg)
-        UpdateRemotePlugins
-    endfunction
-    Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
-endif
-
-
-" ncm2
-" ----
-if !g:has_windows
-    Plug 'ncm2/ncm2'
-    Plug 'roxma/nvim-yarp'
-
-    " This is needed by nvim-yarp
-    Plug 'Shougo/neco-vim'
-
-    " NOTE: you need to install completion sources to get completions. Check our
-    " wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
-    Plug 'ncm2/ncm2-tmux'
-
-    Plug 'ncm2/ncm2-bufword'
-    Plug 'ncm2/ncm2-path'
-    Plug 'arielmakestuff/ncm2-html-subscope', {'branch': 'develop'}
-    Plug 'ncm2/ncm2-markdown-subscope'
-    Plug 'ncm2/ncm2-rst-subscope'
-    Plug 'ncm2/ncm2-ultisnips'
-    Plug 'ncm2/ncm2-match-highlight'
-    Plug 'ncm2/ncm2-tern', {'do': 'yarn'}
-    Plug 'ncm2/ncm2-cssomni'
-    Plug 'ncm2/ncm2-vim'
-    Plug 'ncm2/ncm2-syntax' | Plug 'Shougo/neco-syntax'
 endif
 
 

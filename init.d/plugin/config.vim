@@ -24,27 +24,15 @@ let g:rustup_toolchain = 'nightly'
 
 
 " --------------------
-" LanguageClient
+" vim-lsp
 " --------------------
-
-" g:rustup_toolchain must be set before languageclient.vim is executed
-exec s:runparts_plugcfg_cmd . 'languageclient.vim'
+exec s:runparts_plugcfg_cmd . 'vim-lsp.vim'
 
 
 " --------------------
-" deoplete
+" asyncomplete
 " --------------------
-if g:has_windows
-    exec s:runparts_plugcfg_cmd . 'deoplete.vim'
-endif
-
-
-" --------------------
-" ncm2
-" --------------------
-if !g:has_windows
-    exec s:runparts_plugcfg_cmd . 'ncm2.vim'
-endif
+exec s:runparts_plugcfg_cmd . 'asyncomplete.vim'
 
 
 " --------------------
