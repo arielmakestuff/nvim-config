@@ -24,6 +24,7 @@ function! s:setup_sources()
     endif
 
     call s:register_source('necovim', {'whitelist': ['vim']})
+    call s:register_source('necosyntax', {'whitelist': ['*']})
 endfunction
 
 " allow modifying the completeopt variable, or it will
