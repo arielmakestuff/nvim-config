@@ -35,9 +35,9 @@ endfunction
 
 augroup lsp_asyncomplete
     " auto close preview window when completion is done
-    autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
-
-    autocmd! User asyncomplete_setup call s:setup_sources()
+    autocmd!
+    autocmd CompleteDone * if pumvisible() == 0 | pclose | endif
+    autocmd User asyncomplete_setup call s:setup_sources()
 augroup END
 
 inoremap <expr> <C-y> pumvisible() ? asyncomplete#close_popup() : "\<C-y>"
