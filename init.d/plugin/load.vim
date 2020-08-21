@@ -156,37 +156,6 @@ endif
 " Below plugins are no longer installed but may be needed in future
 " ******************************************************************
 
-" deoplete-jedi
-" -------------
-" Plug 'zchee/deoplete-jedi'
-" if exists(':DeopleteEnable')
-"     let g:jedi#completions_enabled = 0
-"     let g:jedi#auto_vim_configuration = 0
-"     let g:jedi#smart_auto_mappings = 0
-"     let g:jedi#show_call_signatures = 0
-" endif
-
-
-" jedi
-" ----
-" Plug 'davidhalter/jedi-vim'
-" let g:jedi#force_py_version = 3
-" let g:jedi#completions_enabled = 0
-" let g:jedi#auto_vim_configuration = 0
-" let g:jedi#smart_auto_mappings = 0
-" let g:jedi#show_call_signatures = 0
-
-
-" FZF
-" ---
-" Plug 'junegunn/fzf', { 'dir': g:nvim_data_home . '/fzf',
-"             \ 'do': './install --completion --key-bindings --no-update-rc' }
-" Plug 'junegunn/fzf.vim'
-
-
-" Plug 'Lokaltog/vim-easymotion'
-" Plug 'tpope/vim-sensible'
-
 " For debugging
 " -------------
 " Plug 'tpope/vim-scriptease'
