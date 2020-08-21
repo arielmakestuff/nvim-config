@@ -5,20 +5,21 @@
 " ============================================================================
 
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#enable_smart_case = 1
+call deoplete#custom#option({'smart_case': v:true})
 
-if !exists('g:deoplete#omni#input_patterns')
-    let g:deoplete#omni#input_patterns = {}
-endif
+" if !exists('g:deoplete#omni#input_patterns')
+"     call deoplete#custom#var('omni', 'input_patterns', {})
+" endif
 
-" set sources
-let g:deoplete#sources = {}
-let g:deoplete#sources.python = ['LanguageClient']
-let g:deoplete#sources.python3 = ['LanguageClient']
-let g:deoplete#sources.rust = ['LanguageClient']
-let g:deoplete#sources['javascript.jsx'] = ['LanguageClient', 'file']
-let g:deoplete#sources.rst = []
-let g:deoplete#sources.vim = ['vim']
+" " set sources
+" call deoplete#custom#option('sources', {
+" \     '_': ['buffer', 'file'],
+" \     'python': ['lsp', 'buffer', 'file'],
+" \     'python3': ['lsp', 'buffer', 'file'],
+" \     'rust': ['lsp', 'buffer', 'file'],
+" \     'javascript.jsx': ['lsp', 'buffer', 'file'],
+" \     'vim': ['lsp', 'buffer', 'file'],
+" \ })
 
 " Disable the candidates in Comment/String syntaxes.
 call deoplete#custom#source('_',
