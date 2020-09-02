@@ -49,6 +49,8 @@ Plug 'tpope/vim-abolish'
 Plug 'christianrondeau/vim-base64'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-speeddating'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
